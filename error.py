@@ -9,7 +9,7 @@ from fonttheme import FontTheme
 class ErrorMessage(InterfaceWindow):
   def __init__(self, screen, line):
     InterfaceWindow.__init__(self, screen, "error-bg.png")
-    text = fontfx.shadow("Error!", 60, [255, 255, 255], offset = 2)
+    text = fontfx.shadow("Error!", FontTheme.error_message, [255, 255, 255], offset = 2)
     text_rect = text.get_rect()
     text_rect.center = [320, 50]
     screen.blit(text, text_rect)
@@ -24,7 +24,7 @@ class ErrorMessage(InterfaceWindow):
     r.center = [320, 240]
     screen.blit(b, r)
 
-    text = fontfx.shadow("Press Enter/Start/Escape", 32, [160, 160, 160])
+    text = fontfx.shadow("Press Enter/Start/Escape", FontTheme.error_message, [160, 160, 160])
     textpos = text.get_rect()
     textpos.center = [320, 440]
     screen.blit(text, textpos)
