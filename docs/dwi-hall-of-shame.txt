@@ -1,0 +1,25 @@
+For those of us who hate the DWI format (which is everyone who ever
+tried to write a parser for it), I present the DWI Hall of Shame,
+where I mention personal information about people who write the
+stupidest possible files ever.
+
+TournaMix 2, "Peanuts Theme" by Eithug <eirthug@comcast.net>, AIM
+E1rt4u9. This file contains the phrase '...B!(60...'. What does this
+mean? Jump and then a 16th note later start to hold? Jump and then
+hold the left parenthesis? It's nonsense.
+
+DJ Taka's "M" by Christopher Emirzian <udder@rydia.net>, which
+contains a BPM change at the beat "894.8.3". The hell?
+
+Chris Danford, for the oh-so-classic Stepmania editor bug. This
+results in holds like '0!B' for a left+right jump and hold, or '4!6'
+for only holding the right arrow, which makes even less sense.
+
+And of course, SimWolf <simwolf_dwi@hotmail.com>, for inventing a
+format that's so braindead. Thanks for the lack of a formal grammar,
+no encoding information, and double meanings of : and #, and writing
+proprietary code that somehow manages to parse all the absolute 
+*SHIT* above.
+
+Oh, and for totally changing the meaning of <...> between versions to
+make it backwards and forwards incompatible.

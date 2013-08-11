@@ -1,0 +1,1193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+    <title>pydance User's Manual</title>
+    <style type="text/css">
+h1 { border-bottom: solid 2px }
+h2 { border-bottom: solid 1px; margin-right: 15% }
+h3 { text-decoration: underline }
+dl.options dt { font-family: monospace }
+dl.faq dt { font-weight: bold }
+img {
+ float: left;
+ border: solid black 1px;
+ margin: 1em;
+}
+
+pre {
+ margin-left: 10%;
+white-space: pre;
+}
+
+dl { margin-left: 3em }
+
+dl dl { margin-left: 0 }
+
+dt { font-weight: bold}
+
+th { text-align: left }
+
+body {
+ padding: 0 0.5em;
+}
+
+div.toc {
+ font-size: 0.7em;
+}
+
+p {
+ margin: 0.5em 1em;
+}
+
+</style>
+  </head>
+  <body>
+<h1 style="text-align: center; font-weight: bold; border: none;
+  text-decoration: underline"><tt>pydance</tt> User's Manual</h1>
+<div class="toc">
+<ol>
+<li><a href="#about">About <tt>pydance</tt></a><ol>
+<li><a href="#about.sysrq">System Requirements</a></li>
+<li><a href="#about.cant">What <tt>pydance</tt> <em>Can't</em> Do</a></li>
+</ol>
+</li>
+<li><a href="#install">Installing <tt>pydance</tt></a><ol>
+<li><a href="#install.py">Getting Python and Pygame</a><ol>
+<li><a href="#install.py.unix">Unix</a></li>
+<li><a href="#install.py.osx">Mac OS X</a></li>
+<li><a href="#install.py.win">Windows</a></li>
+</ol>
+</li>
+<li><a href="#install.dance">Getting <tt>pydance</tt></a></li>
+<li><a href="#install.songs">Getting Songs</a><ol>
+<li><a href="#install.songs.dance">Installing .dance Files</a></li>
+<li><a href="#install.songs.braindead">.sm and .dwi Files</a></li>
+<li><a href="#install.songs.ksf">.ksf Files</a></li>
+</ol>
+</li>
+<li><a href="#install.mat">Setting Up a Mat</a><ol>
+<li><a href="#install.mat.ps2">Attaching a PSX/PS2 Mat</a></li>
+<li><a href="#install.mat.piu">Attaching a Pump It Up Mat</a></li>
+<li><a href="#install.mat.ppp">ParaParaParadise Controllers</a></li>
+<li><a href="#install.mat.other">Other Mats</a></li>
+</ol>
+</li>
+<li><a href="#install.courses">Getting Courses</a><ol>
+<li><a href="#install.courses.crs">.crs Files</a></li>
+</ol>
+</li>
+<li><a href="#install.cd">Getting CD Titles and Banners</a></li>
+<li><a href="#install.themes">Graphical Themes</a></li>
+<li><a href="#install.dj">Announcer (DJ) Themes</a></li>
+<li><a href="#install.fonttheme">Font Themes</a></li>
+</ol>
+</li>
+<li><a href="#play">Playing the Game</a><ol>
+<li><a href="#play.menu">The Main Menu</a></li>
+<li><a href="#play.game">Game Types</a><ol>
+<li><a href="#play.game.panel">Panel Layouts</a></li>
+<li><a href="#play.game.type">Game Type</a></li>
+<li><a href="#play.game.int">Interface</a></li>
+</ol>
+</li>
+<li><a href="#play.ss">The Song Selector</a><ol>
+<li><a href="#play.ss.diff">Song Difficulties</a></li>
+</ol>
+</li>
+<li><a href="#play.options">Players' Options</a></li>
+<li><a href="#play.nonstop">Nonstop Mode</a><ol>
+<li><a href="#play.nonstop.inc">Included Courses</a></li>
+</ol>
+</li>
+<li><a href="#play.endless">Endless Mode</a></li>
+<li><a href="#keys">Mapping Keys</a></li>
+</ol>
+</li>
+<li><a href="#tips">Tips</a></li>
+<li><a href="#files">Important Files</a><ol>
+<li><a href="#files.config">Main Configuration</a></li>
+<li><a href="#files.input">Input Configuration</a></li>
+<li><a href="#files.records">Records</a></li>
+</ol>
+</li>
+<li><a href="#dance">Creating .dance Files</a><ol>
+<li><a href="#dance.header">Header Information</a><ol>
+<li><a href="#dance.header.tags">A List of .dance Tags</a></li>
+</ol>
+</li>
+<li><a href="#dance.text">Text Data</a><ol>
+<li><a href="#dance.text.desc">The Description</a></li>
+<li><a href="#dance.text.lyrics">Lyrics</a></li>
+</ol>
+</li>
+<li><a href="#dance.steps">Step Data</a></li>
+</ol>
+</li>
+<li><a href="#themes">Creating Graphical Themes</a><ol>
+<li><a href="#themes.arrows">The Arrows</a></li>
+<li><a href="#themes.lifebar">The Lifebar</a></li>
+<li><a href="#themes.zip">Zipping Themes</a></li>
+</ol>
+</li>
+<li><a href="#fontthemes">Creating Font Themes</a></li>
+<li><a href="#i18n">Translating <tt>pydance</tt></a></li>
+<li><a href="#contact">Contact the Developers</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#license">License</a></li></ol>
+
+</div>
+    <h1 id="about">About <tt>pydance</tt></h1>
+    <p>
+    <img src="images/joe-sis.jpg" alt="Joe and his sister playing DDR"
+      title="Joe and his sister playing DDR" style="float: right" />
+Have you ever gone to an arcade and seen some crazy girl busting moves
+on some sort of metal panel of sorts, or a guy making a fool of
+himself trying to dance without watching the screen? Well, that game
+is probably Dance Dance Revolution, or DDR for short, which has been a
+hit in Asian countries for awhile and is finally getting popular in
+Europe and North America. It might also have been a similar game, such
+as Pump It Up, or EZ2 Dancer.</p>
+    <p><tt>pydance</tt> lets you play these games, and others like them, on
+your computer, either with the keyboard or with a custom controller.
+What you do is watch the screen as colored arrows move up the screen.
+As soon as they cover up stationary arrows at the top, you step (or
+press) the corresponding direction, in time with the beat of the
+music.</p>
+    <p>This manual is designed to guide you through the process of
+getting and installing <tt>pydance</tt>, finding songs, setting it up, and
+dancing the night away. In addition, it has instructions for making
+your own dance patterns or arrow graphics.</p>
+    <p>You don't need a dance mat to play <tt>pydance</tt>! It's a lot more fun
+if you do, but you can also use your keyboard or gamepad.</p>
+    <h2 id="about.sysrq">System Requirements</h2>
+    <p>These are rough guidelines. Depending on your graphical theme,
+operating system, and so on, these requirements can differ. Although
+it is possible to install and play <tt>pydance</tt> on systems slower than
+this, the frame rate (and input latency) will be high enough that it
+won't be much fun.</p>
+    <dl>
+      <dt>Operating System</dt>
+      <dd>GNU/Linux (<a href="http://www.debian.org">Debian</a> is the
+easiest to use with <tt>pydance</tt>), Mac OS X, or Windows 2000 or higher. If
+Windows is your OS of choice, we can't help you debug. If Mac OS X is
+your OS of choice, we'll have plenty of trouble as well, but it's
+likely to work in the end.</dd>
+      <dt>Video Card</dt>
+      <dd>A video card capable of doing 640x480x16bpp, which is most
+video cards made since 1995. More recent cards will be faster, but
+many old cards (ATI Radeon 7000, Matrox G200, nVidia TNT1) will be
+able to run <tt>pydance</tt> acceptably.</dd>
+      <dt>Processor</dt>
+      <dd>We recommend a 1 GHz IA32 or 600 MHz PPC processor, or
+better, for <tt>pydance</tt>. However, <tt>pydance</tt> will run acceptably on a P3-500
+or equivalent.</dd>
+      <dt>RAM</dt>
+      <dd>At least 64MB is required. 128MB is very strongly
+recommended. <tt>pydance</tt> uses RAM to cache graphics, so more RAM means the
+UI will respond faster.</dd>
+      <dt>Hard Disk Space</dt>
+      <dd><tt>pydance</tt> requires about 5MB (around 50MB if you don't already
+have Python, SDL, or Pygame installed) of hard drive space to install.
+Songs take 1MB to 6MB each, on average. If your RAM is low, you will
+also need hard drive space for swap.</dd>
+    </dl>
+
+    <h2 id="about.cant">What <tt>pydance</tt> <em>Can't</em> Do</h2>
+    <p>Upfront: This program is not perfect. There are some things it
+can't do, either because we haven't gotten around to making it do them
+yet, or because we don't want to. On the whole, these are very minor
+things, but they're faults nonetheless.</p>
+    <dl>
+      <dt>Play MP3s</dt>
+      <dd><tt>pydance</tt> has very poor MP3 support. Some MP3s will load;
+most won't. Many will load, but then later cause <tt>pydance</tt> to crash,
+even if you aren't using them for anything. Setting your Preview mode
+to "Safe" can alleviate some of the problems, but not all. <tt>pydance</tt> is
+capable of loading Ogg Vorbis (.ogg) and Wave (.wav) files without
+issue, however.</dd>
+      <dt>Display Most Background Movies</dt>
+      <dd>Many dancing games have movies playing in the background.
+<tt>pydance</tt> cannot load these movies.</dd>
+      <dt>"Magic Dance" or "Challenge Mode" games</dt>
+      <dd>"Magic Dance" was a rare DDR mode that appeared in DDR
+Disney Rave. "Challenge Mode" appeared in DDR 4th mix and Ultramix
+(for the X-Box). Neither of these modes is supported (nor are they
+very popular).</dd>
+      <dt>"Half Double" games</dt>
+      <dd>"Half double" is a mode in Pump It Up that uses a different
+part of each mat. <tt>pydance</tt> can emulate half double by playing regular
+doubles mode, and having steps only appear on the relevant
+panels.</dd>
+      <dt>Sundry Proprietary Konamiisms</dt>
+      <dd><tt>pydance</tt> cannot read your Playstation memory cards, nor can
+it register you for Internet Ranking scores.</dd>
+      <dt>Be a DDR/PIU/EZ2/etc. Arcade Machine</dt>
+      <dd>We're not aiming to perfectly clone the arcade games with
+<tt>pydance</tt>; to start with, since we support at least 5 different arcade
+machines, that's impossible. We have our own interface, scoring
+system, and other ideas about what makes a fun dancing game.
+(Technically, if you put a computer running <tt>pydance</tt> inside an arcade
+cabinet and attached some pads and a keyboard, I guess it would be an
+arcade machine; but it still won't look like the other games very
+much.)</dd>      
+      <dt>Network Play</dt>
+      <dd>Although a future version of <tt>pydance</tt> <em>might</em> have
+network support, the current version does not. The best way to ensure
+that <tt>pydance</tt> does have network support in the future is to help write
+it yourself.</dd>
+      <dt>Edit Dance Patterns Graphically</dt>
+      <dd>There is no graphical step pattern editor for <tt>pydance</tt>'s
+.dance format; instead, you can use a text editor.</dd>
+    </dl>
+
+    <h1 id="install">Installing <tt>pydance</tt></h1>
+    <p>Throughout the install guide, two path "aliases" will be used.
+<tt><em>pydance_path</em></tt> refers to the place you're running
+pydance from (e.g. <tt>/usr/share/games/pydance/</tt>,
+<tt>/home/myuser/pydance/</tt>, or <tt>C:\games\pydance\</tt>).
+<tt><em>rc_path</em></tt> refers to a "user-specific" path. On Unix,
+this is <tt>~/.pydance/</tt>. On Mac OS X, this is
+<tt>~/Library/Preferences/pydance/</tt>. On Windows, this is the same
+as the place you unpacked <tt>pydance</tt>.</p>
+    <p>This guide always uses '/' to separate directories. Windows
+users can also use '\' which they might be more accustomed to.</p>
+
+    <h2 id="install.py">Getting Python and Pygame</h2>
+    <p><tt>pydance</tt> is written in the <a
+href="http://www.python.org">Python</a> programming language, and uses
+the <a href="http://www.pygame.org">Pygame</a> game programming
+library. While this makes the program small and easy to develop, it
+also results in a few more things to download.</p>
+    <p>More detailed (and/or recent) instructions for installing
+Python and Pygame are available at the <a
+href="http://icculus.org/pyddr/get.php"><tt>pydance</tt> download page</a>.</p>
+    <h3 id="install.py.unix">Unix</h3>
+    <p>You will need Python 2.4, and Pygame 1.8.1. The <a
+href="http://icculus.org/pyddr/get.php"><tt>pydance</tt> download page</a>
+contains links and information on how to get the packages you need.
+Usually, these will be easy to find, or may even already be
+installed.</p>
+    <h3 id="install.py.osx">Mac OS X</h3>
+    <p>You want the <a
+href="http://prdownloads.sourceforge.net/visionegg/py_kitchensink_8Mar2003.dmg">Pygame 
+kitchen sink</a> install, which contains everything you'll need.</p>
+    <h3 id="install.py.win">Windows</h3>
+    <p>Download a recent version of <a
+href="http://www.python.org/ftp/python/2.4/Python-2.4.exe">Python
+2.4</a>, and <a
+href="http://www.pygame.org/ftp/pygame-1.8.1release.win32-py2.4.msi">Pygame
+1.8.1</a>.</p>
+
+    <h2 id="install.dance">Getting <tt>pydance</tt></h2>
+    <p>To get the latest version of <tt>pydance</tt>, visit the <a
+href="http://icculus.org/pyddr/get.php"><tt>pydance</tt> download page</a>. It
+is available as a .zip or a .tar.gz file. The site also contains
+information about installing from packages for Debian, Mandrake, and
+Gentoo GNU/Linux, and also has a disk image for Mac OS X users.</p>
+    <p>Otherwise, to run <tt>pydance</tt>, you can often just download the
+source, unpack it, and double click on <tt>pydance.py</tt> (or run
+<kbd>./pydance.py</kbd>). The <tt>INSTALL</tt> file included with
+<tt>pydance</tt> has detailed installation instructions for Unix.</p>
+
+    <h2 id="install.songs">Getting Songs</h2>
+    <p><tt>pydance</tt> requires songs to run properly. There are some free
+songs available <a href="http://icculus.org/pyddr/get.php#songs">on
+the <tt>pydance</tt> site</a>, one of which is a "how to play" tutorial. In
+addition, there are many other songs available on the web.</p>
+    <p>All song files must go in one of your song directories,
+<tt><em>rc_path</em>/songs/</tt> and
+<tt><em>pydance_path</em>/songs/</tt> (when you run <tt>pydance</tt> from a
+terminal or command prompt, it will print a list of the directories
+it's searching for songs).</p>
+    <h3 id="install.songs.dance">Installing .dance Files</h3>
+    <p>The .dance format is <tt>pydance</tt>'s native step file format. .dance
+files are accompanied by a music file (.ogg), and optionally a banner,
+background, and CD title (all images). Assuming the .dance file is
+properly constructed, you can simply put the .dance, .ogg, and other
+files anywhere inside one of your song directories (however, they
+should be in the same subdirectory).</p>
+    <h3 id="install.songs.braindead">.sm and .dwi Files</h3>
+    <p>.sm and .dwi files are file formats used by other popular PC
+dancing games. These require a little more structure than .dance
+files; they must go in <tt><em>songdir</em>/Mix Name/Song Name/</tt>,
+where "Mix Name" is the name of the folder you want the song to be
+in "Sort by Mix" mode, and "Song Name" is the name of the song itself.
+Like .dance, .dwi and .sm are accompanied by music and image files,
+but unlike .dance, you cannot put multiple .dwi or .sm files in the
+same directory; you must put them in separate subdirectories according
+to mix and song name.</p>
+    <p>You might also run across a few ".smzip" files. These are
+ordinary zip files which you can open with any unzipping utility.</p>
+    <h3 id="install.songs.ksf">.ksf Files</h3>
+    <p>.ksf files are yet another popular file format. Patterns in
+.ksf format will come as multiple .ksf files, one or two audio files,
+and zero to two image files. Like .dwi or .sm files, each song needs
+its own directory, which contains all the .ksf, audio, and image files
+for that song.</p>
+    <p>Some .ksf files might also need to have that directory named in
+the format <tt>Artist Name - Song Name/</tt>.</p>
+
+    <h2 id="install.mat">Setting Up a Mat</h2>
+    <p><tt>pydance</tt> supports anything that looks like a joystick (or
+gamepad) or keyboard to your operating system. This includes most mats
+and adapters. However, some adapters map (e.g.) left and right onto a
+single joystick axis, which means you can't press left and right at
+the same time. This doesn't affect most games, but will affect
+<tt>pydance</tt>.</p>
+    <h3 id="install.mat.ps2">Attaching a PSX/PS2 Mat</h3>
+    <p>
+    <a href="http://www.levelsix.com/detail.aspx?ID=2" title="Purchase
+an EMSUSB2 at Level Six"><img src="images/emsusb2.jpg" alt="An EMSUSB2
+	  (colors may vary)" /></a> The most popular dance mats are
+for Playstations or Playstation 2s. The best adapter for these is an <a
+href="http://levelsix.com/detail.aspx?ID=2" title="Purchase an EMSUSB2
+at Level Six">EMSUSB2</a>, which lets you connect two mats to a USB
+port. The EMSUSB2 works in Linux, Mac OS X, and Windows, and any OS
+that supports standard USB joysticks. You can also purchase dance mats
+themselves at <a href="http://www.levelsix.com">Level Six</a>. If you
+live outside of North America, <a
+href="http://www.lik-sang.com/info.php?category=23&amp;products_id=1697">buying 
+an EMSUSB2 from Lik-Sang</a> might be easier, because they can ship
+from Europe and Hong Kong as well. If you're looking for a high-quality dance pad, <a href="http://www.cobaltflux.com">Cobalt Flux pads</a> sells metal pads for $300. They have all 9 panels (center and the 8 directions), and work with <tt>pydance</tt> if you have a PS2-to-USB adapter like the EMSUSB2.</p>
+
+    <p>
+    <a href="http://www.levelsix.com/detail.aspx?ID=56" title="A good
+beginner's DDR pad at Level Six"><img style="float:right"
+	  src="images/cheappad.jpg" alt="A soft DDR mat without foam"
+	  /></a> Some other adapters are also supported. The parallel
+port adapter that comes with <a
+href="http://www.buynshop.com">Buy'n'Shop</a> DDR mats is supported on
+many platforms, including Linux with the use of our <a
+href="http://icculus.org/pyddr/get.php#ddrmat">ddrmat.o kernel
+module</a>. However, the EMSUSB2 is the most recommended.</p>
+    <p>The Radio Shack adapter will not work with <tt>pydance</tt>. Don't buy
+it.</p>
+    <h3 id="install.mat.piu">Attaching a Pump It Up Mat</h3>
+    <p>Pump It Up mats come in two varieties, PS/2 and USB. The PS/2
+variety is just a keyboard, that uses QESZC or 79513, and Escape. It
+is supported immediately on any platform (but remember to map it with
+the keyboard, and not joystick, controls). The USB variety is also a
+keyboard, but doesn't inform the OS that it is such. On Windows there
+are drivers to enable it (that come with the mat). On Linux, you can
+use a USB to PS/2 adapter.</p>
+    <h3 id="install.mat.ppp">ParaParaParadise Controllers</h3>
+    <p>Although the PPP controller appears as a USB joystick in all
+operating systems, it does not send any events when a sensor is
+triggered. So it will not work with <tt>pydance</tt>, under any OS.</p>
+    <h3 id="install.mat.other">Other Mats</h3>
+    <p>There exist some other mats, such as the X-Box DDR mat, and
+some mats that hook directly up to a parallel or USB port. If your OS
+detects these as a joystick or keyboard, and they use buttons (or axes
+<em>and</em> buttons) to record direction presses, <tt>pydance</tt> will
+support them. If you are buying a mat and adapter for the first time,
+though, we recommend avoiding these and going to the kinds that will
+definitely work.</p>
+
+    <p><strong>This is all you need to start playing <tt>pydance</tt></strong>,
+a few songs and a mat. If you're starting out you can skip the next
+few sections, because those files are optional.</p>
+
+    <h2 id="install.courses">Getting Courses</h2>
+    <p><tt>pydance</tt> comes with some courses for "Nonstop Mode" (explained
+later), but you can also download your own. Courses go in
+<tt><em>rc_path</em>/courses/</tt> or
+<tt><em>pydance_path</em>/courses</tt>.</p>
+
+    <h3 id="install.courses.crs">.crs Files</h3>
+    <p><tt>.crs</tt> files are the only courses supported by <tt>pydance</tt>
+currently. These are used with <tt>.dwi</tt> files, usually. Like
+those, they need to be in a subdirectory <tt><em>coursedir</em>/Mix
+Name/Course Name/</tt>. If a file exists with the same name as the
+.crs file but ending in .png, (e.g. <tt>POP 8.crs</tt> and <tt>POP
+8.png</tt>), then that image will be used on the course selection
+screen.</p>
+    <p>Also, if there exists a file <tt><em>coursedir</em>/Mix
+Name.png</tt>, it will be displayed for that mix folder in the course
+selector.</p>
+
+    <h2 id="install.cd">Getting CD Titles and Banners</h2>
+    <p>The song selector lets you have banners for different folders.
+These go under
+<tt><em>pydance_or_rc_path</em>/banners/<em>sorttype</em>/<em>foldername</em>.png</tt>. 
+For example, if you want a banner for your "DDR 4th Mix" folder, you
+can name it <tt>~/.pydance/banners/mix/DDR 4th Mix.png</tt>. If you
+want one for the "Title: A" folder, use
+<tt>~/.pydance/banners/title/a.png</tt>.</p>
+    <p><tt>pydance</tt> also supports "CD titles", which are small images that
+appear next to the song in the song selector, usually indicate what
+album or game it is originally from. These go under
+<tt><em>pydance_or_rc_path</em>/cdtitles/</tt>, or in the same
+directory as the song file itself.</p>
+
+    <h2 id="install.themes">Graphical Themes</h2>
+    <p>There are many different arrow graphics that come with <tt>pydance</tt>,
+and you can also add more. These go under
+<tt><em>rc_path</em>/themes/gfx/<em>N</em>x<em>N</em>/themename/</tt>
+or
+<tt><em>rc_path</em>/themes/gfx/<em>N</em>x<em>N</em>/<em>themename</em>.zip</tt> 
+(the .zip file can be read without being unpacked). <em>N</em> is the
+height and width of the images in the theme; different game modes use
+different image sizes.</p>
+
+    <h2 id="install.dj">Announcer (DJ) Themes</h2>
+    <p><tt>pydance</tt> supports an announcer, who talks during the game,
+giving you feedback on your progress. You should unzip (or untar) such
+themes in <tt><em>rc_path</em>/themes/dj</tt>, into a subdirectory of
+their name. Announcers are still being developed, and don't work very
+well.</p>
+
+	<h2 id="install.fonttheme">Font Themes</h2>
+	<p><tt>pydance</tt> user interface can be customized to use True Type fonts different from the default Pygame font. Currently, VL PGothic Font is supported to display song titles and locales with Asian characters. Font theme configuration files and font files are found under <tt><em>rc_path</em>/themes/font</tt> with a configuration file for each theme, describing what font and size combination should be used for each UI element.</p>
+
+    <h1 id="play">Playing the Game</h1>
+    <p>A dancing pad normally has somewhere between 6 and 11 buttons.
+These buttons are used to control the <tt>pydance</tt> interface, as well as
+play the game. When using them to navigate menus and so on, they have
+slightly different names.</p>
+    <dl>
+      <dt>Up, Down, Left, Right, Start, Select</dt>
+      <dd>These are still the same. Start usually activates menu (the
+same as Confirm), but sometimes does other things.</dd>
+      <dt>Up Right, Center</dt>
+      <dd>These are called "Confirm", and activate menu items.</dd>
+      <dt>Up Left</dt>
+      <dd>This is "Cancel", and backs out of menus or folders.</dd>
+      <dt>Down Left and Down Right</dt><dd>These are Page Up and Page
+down, respectively.</dd>
+    </dl>
+
+    <p>Each player can have one keyboard key and one joystick button
+assigned to each direction. In addition, some keys are automatically
+assigned to a direction or action, if they aren't mapped to something
+else.</p>
+
+    <dl>
+      <dt>F11, f</dt><dd>Toggles fullscreen or windowed display, under
+Unix. This can't be used in the middle of a song.</dd>
+      <dt>Backspace, s</dt><dd>Change the sort order in a menu.</dd>
+      <dt>Print Screen (or SysRq)</dt><dd>Take a screenshot.</dd>
+      <dt>Main arrow keys</dt><dd>Up, down, left, and right.</dd>
+      <dt>Escape, Insert</dt><dd>Cancel.</dd>
+      <dt>Tab</dt><dd>Select.</dd>
+      <dt>Return</dt><dd>Confirm.</dd>
+    </dl>
+
+    <h2 id="play.menu">The Main Menu</h2>
+    <p>
+    <img src="images/menu.jpg" alt="Menu Screenshot"
+      title="The pydance main menu" style="float:right" /> If your
+songs are properly installed, this is the first screen you will see
+after <tt>pydance</tt> finishes loading (if your songs aren't installed, you'll
+get a reminder to install them).</p>
+    <dl>
+      <dt>Up or Down</dt><dd>Select an item in the menu.</dd>
+      <dt>Confirm, Start, or Right</dt><dd>Activate a menu item, or
+cycle through options.</dd>
+      <dt>Left</dt><dd>Cycle through options the opposite direction,
+or back up.</dd>
+    </dl>
+    <p><em>Play Game</em> takes you to the game selection screen, and
+is probably what you want to select. The <em>Map Keys</em> option
+takes you to a screen to map your keyboard and joystick on. After you
+do this once your settings will be saved, and you'll only need to
+remap it after you change adapters or joysticks.</p>
+    <p>The other choices let you change <tt>pydance</tt>'s global
+configuration, or your theme settings.</p>
+    <dl>
+      <dt>Game Options</dt>
+      <dd><dl>
+	  <dt>Autofail</dt><dd>Stop the song and go to the grading
+screen when all players have failed it.</dd>
+	  <dt>Assist Mode</dt><dd>Play a click, or a unique sound for
+each direction, when an arrow should be hit.</dd>
+	  <dt>Announcer</dt><dd>Set your announcer theme.</dd>
+	  <dt>Themes...</dt><dd>Set your graphical themes for all the
+different modes <tt>pydance</tt> supports.</dd>
+	</dl></dd>
+      <dt>Graphic Options</dt>
+      <dd><dl>
+	  <dt>Animation</dt><dd>Animate arrows as they scroll up the
+screen (if your theme supports it). Turning this off may increase your
+framerate.</dd>
+	  <dt>Arrow Effects</dt><dd>Have arrows "explode" at the top
+of the screen by rotating and scaling them. Turning this off can
+result in a higher framerate.</dd>
+	  <dt>Backgrounds</dt><dd>Turn background images on or off.
+This won't help your framerate.</dd>
+	  <dt>Brightness</dt><dd>Adjust the brightness of background
+images.</dd>
+	  <dt>Lyrics</dt><dd>Display lyrics during songs. Turning this
+off may increase your framerate slightly.</dd>
+	  <dt>Lyrics Color</dt><dd>Set the color of displayed
+lyrics.</dd>
+	</dl></dd>
+      <dt>Interface Options</dt>
+      <dd><dl>
+	  <dt>Save Input</dt>
+	  <dd>When <tt>pydance</tt> exits, it can save your input settings, or
+forget about them. Turning this off makes it forget them.</dd>
+	  <dt>Song Previews</dt>
+	  <dd>Turning this off disables the song clips that are played
+in the song selector. Selecting "Safe" means that Ogg Vorbis files
+will be previewed, but MP3s won't. If you're having trouble with
+<tt>pydance</tt> crashing while previewing MP3s, set this to Safe.</dd>
+	  <dt>Folders</dt>
+	  <dd>If you have over 60 songs or courses, folders will be
+displayed in the song and course selector for your convenience. If you
+want to view them all in one display, you can turn these folders
+off.</dd>
+	  <dt>Timer Display</dt>
+	  <dd>Turning this on results in a game timer being displayed
+at the top of the screen (in seconds), and an FPS counter in the lower
+left corner.</dd>
+          <dt>Font</dt>
+          <dd>Select the font theme being used. Current choices are the
+pygame default and VLGothic for Asian fonts. Requires restart.</dd>
+	</dl>
+</dd>
+    </dl>
+
+    <h2 id="play.game">Game Types</h2>
+    <p>
+    <img src="images/gameselect.jpg" alt="Screenshot of the game selector"
+      title="The game selection screen" style="float:right"/> The game
+selection screen is the one you'll see first after selecting "play
+game". Here, you select what panels or controller you want to use, how
+many people are playing, and whether you want to play individual songs
+or a sequence of them.</p>
+    <dl>
+      <dt>Up, Down</dt>
+      <dd>Change your game, mode, or interface.</dd>
+      <dt>Confirm, Start</dt><dd>Advance your selection.</dd>
+      <dt>Cancel</dt><dd>Back up or go to the menu.</dd>
+    </dl>
+
+    <h3 id="play.game.panel">Panel Layouts</h3>
+    <dl>
+      <dt>3, 4, 5, 6, 7, 8, or 9 panel</dt>
+      <dd>Play "regular" dancing games. The directions used are
+highlighted on the displayed dance mat. Note that many mats don't have
+a center button, and so you won't be able to play 5 or 9 panel.</dd>
+      <dt>Parapara</dt>
+      <dd>Use the top half of the mat (left, up left, up, up right,
+and right) to dance.</dd>
+      <dt>DMX</dt>
+      <dd>Like the DanceManiaX game, use the upper and lower
+parts of the sensors, or left, up left, up right, and right.</dd>
+      <dt>EZ2 and EZ2 Real</dt>
+      <dd>Use three direction arrows, and left, down left, down right,
+and right for the circular buttons. EZ2 only uses the top circular
+ones, and EZ2 Real uses all four.</dd>
+    </dl>
+    <h3 id="play.game.type">Game Type</h3>
+    <dl>
+      <dt>Single</dt><dd>One player, one controller.</dd>
+      <dt>Versus</dt><dd>Two players on separate controllers, with the
+same steps available to both. Player one will be on the left side, and
+player two, on the right.</dd>
+      <dt>Couple</dt><dd>Two players, but with different steps
+available for each. Both players must play the same difficulty
+level.</dd>
+      <dt>Double</dt><dd>One player on two controllers! You have to
+cross over between them as you play.</dd>
+    </dl>
+    <h3 id="play.game.int">Interface</h3>
+    <dl>
+      <dt>Normal</dt><dd>Select one song at a time to play.</dd>
+      <dt>Nonstop</dt><dd>Select a "course" of songs to play, without
+breaks in between. <tt>pydance</tt> comes with several courses, and you can add
+your own.</dd>
+      <dt>Endless</dt><dd>Select your difficulty level, and then keep
+dancing until you fail.</dd>
+    </dl>
+
+    <p>The game selector will display modes you don't have any
+available steps for, so after selecting your interface you might find
+out you need to back up and pick different options.</p>
+
+    <h2 id="play.ss">The Song Selector</h2>
+    <p>
+    <img src="images/ss-song.jpg"
+      alt="Screenshot of the song selector, with a song selected"
+      title="Viewing a Song" style="float: right"/> The song selector
+is one of the "main screens" of the <tt>pydance</tt> interface.  This is where
+you pick the song you want to play, and the difficulty of it.</p>
+    <p>If you have more than 60 songs, the song selector will start up
+in "folder mode", where your songs are organized into folders by
+title, artist, BPM, mix name, difficulty level, or difficulty rating. You can turn off folders in the
+Interface Options menu; they are automatically disabled if you have
+fewer than 60 songs.</p>
+    <p>When a folder is selected, the number of songs inside it will
+be displayed. When a song is selected, the title, artist, and BPM of
+the song will be displayed, as will each player's selected difficulty,
+the rating of that difficulty, and the top score on that difficulty.
+    <img src="images/ss-folder.jpg"
+      alt="Screenshot of the song selector, with a folder selected"
+	title="Viewing a Folder" style="float: left"/></p>
+
+    <dl>
+      <dt>Up, Down</dt><dd>Select a song or folder</dd>
+      <dt>Page Up, Page Down</dt><dd>Move up or down 7 items a time
+in the song list</dd>
+      <dt>Left, right</dt><dd>Change your difficulty (if the song has
+more than one)</dd>
+      <dt>Confirm</dt><dd>Open a folder, or start a song</dd>
+      <dt>Cancel</dt><dd>Close a folder (and return to the folder
+list), or exit (if currently viewing the folder list, or folders are
+turned off)</dd>
+      <dt>Start</dt><dd>Switch to the Player Options screen</dd>
+      <dt>Select</dt><dd>Go to a random song, in the current folder
+(if you're in a folder) or selected from all your songs (if you're
+viewing the folder list)</dd>
+    </dl>
+
+    <p>
+    <img src="images/diff-indicator.jpg" alt="The difficulty selector"
+      title="The difficulty selector" style="float: right" /> In
+addition to a name, each difficulty has a numerical rating, usually on
+a scale of 1 to 9. The <tt>pydance</tt> tutorial song has a difficulty of 0,
+and some very hard songs may have difficulties above 9.</p>
+
+    <h3 id="play.ss.diff">Song Difficulties</h3>
+    <p>Different games have used different names to refer to the same
+difficulty level. For example, the easiest game mode is called "easy"
+in TechnoMotion, "basic" in early versions of DDR, and "light" in
+later versions. <tt>pydance</tt> uses the same <em>colors</em> to indicate what
+difficulties have different names, but are the same. These colors are
+also used on the nonstop screen, where only the first letter of the
+difficulty is displayed.</p>
+    <dl>
+      <dt>White</dt><dd>Beginner, very easy</dd>
+      <dt>Orange</dt><dd>Basic, light, easy</dd>
+      <dt>Red</dt><dd>Trick, another, medium</dd>
+      <dt>Green</dt><dd>Heavy, maniac, hard</dd>
+      <dt>Purple</dt><dd>Crazy, hardcore, smaniac, expert</dd>
+    </dl>
+    <p>The names we recommend using are <em>beginner, basic, trick,
+maniac, hardcore</em> (the names early DDR versions used, and the most
+well-known), or <em>beginner, easy, medium, hard, expert</em> (which
+are the easiest to understand for new players).</p>
+    <h2 id="play.options">Players' Options</h2>
+    <p>    <img src="images/options.jpg"
+      alt="A screenshot of the options screen"
+      title="The options screen" style="float: right"/> Pressing
+<strong>Start</strong> on any of the song selection interfaces (the
+song selector, nonstop, or endless) takes you to the players' options
+screen. From here, you can change many per-player settings (sometimes
+called "modifiers" or "mods"), as well as some global ones, like the
+type of lifebar used.</p>
+    <p>When you exit the options screen, both players' options are
+saved between songs. If you exit from the song selector (and go back
+to the main menu or game selection screen) only the first player's are
+remembered, and set as the default for both players. If you exit
+<tt>pydance</tt>, these options are all reset.</p>
+    <p>There are too many different options and settings to explain
+here, but each option has a description that is displayed with it when
+you select it. If you're not sure what something does, just try it
+out!</p>
+    <dl>
+      <dt>Up, Down</dt><dd>Select an option</dd>
+      <dt>Left, Right</dt><dd>Change the value of the current
+option</dd>
+      <dt>Start, Confirm, Cancel</dt><dd>Return to the song
+selector</dd>
+    </dl>
+
+    <h2 id="play.nonstop">Nonstop Mode</h2>
+    <p>
+    <img src="images/nonstop.jpg" alt="Screenshot of Nonstop"
+      title="The HARD CORE course" style="float: right" /> <tt>pydance</tt>
+lets you play several songs in a row, also called a "course". In
+nonstop mode you to select courses to play. The course selector works
+much like the song selector, except you can't select difficulties.
+Again, if you have over 60 courses, a folder display will be on by
+default.</p>
+    <dl>
+      <dt>Up, Down</dt><dd>Select a song or folder</dd>
+      <dt>Page Up, Page Down</dt><dd>Move up or down 4 items a time
+in the course list</dd>
+      <dt>Confirm</dt><dd>Open a folder, or start a course</dd>
+      <dt>Cancel</dt><dd>Close a folder (and return to the folder
+list), or exit (if currently viewing the folder list or folders are
+turned off)</dd>
+      <dt>Start</dt><dd>Switch to the Player Options screen</dd>
+      <dt>Select</dt><dd>Go to a random course, in the current folder
+(if you're in a folder), or out of all your songs (if you're viewing
+the folder list)</dd>
+    </dl>
+    <h3 id="play.nonstop.inc">Included Courses</h3>
+    <p><tt>pydance</tt> comes with two sets of courses that you can play,
+without having to install them.</p>
+    <dl>
+      <dt>Player's Picks</dt>
+      <dd>
+    <img src="images/nonstop-picks.jpg" alt="Player's Picks example"
+	  title="Four Player's Best songs on Manaic" style="float:
+	  right" /> The Player's Picks courses are courses that
+changed based on what songs you play in the regular game mode. The
+courses contain songs with your best or worst scores, or songs you
+have played often ("Likes") or least ("Dislikes"). You must play songs
+at least once for them to appear anywhere on these lists (even in
+Dislikes). Songs played in Nonstop or Endless mode don't affect these
+lists.</dd>
+      <dt>random.choose(songs)</dt>
+      <dd>These courses consist of randomly selected songs, and will
+be different each time you play them. In the <em>All Random</em>
+course, even the difficulty you play on is random each time.</dd>
+    </dl>
+
+
+    <h2 id="play.endless">Endless Mode</h2>
+    <p>
+    <img src="images/endless.jpg" alt="Endless screenshot"
+      title="A screenshot of endless mode" style="float: right" /> If
+all you want to do is play a lot of songs in a row, Endless Mode will
+keep selecting songs for you based on a preferred difficulty until you
+fail. If you're going to play endless mode, you probably want a lot of
+songs available. Otherwise it will get repetitive, or you won't have
+enough songs to match both players' criteria.</p>
+    <dl>
+      <dt>Up</dt><dd>Select difficulty by name</dd>
+      <dt>Down</dt><dd>Select difficulty by rating</dd>
+      <dt>Left, right</dt><dd>Change your difficulty (left is easier,
+right is harder)</dd>
+      <dt>Confirm</dt><dd>Start playing until you fail</dd>
+      <dt>Cancel</dt><dd>Return to the game selector</dd>
+      <dt>Start</dt><dd>Switch to the Players' Options screen</dd>
+    </dl>
+
+    <h2 id="keys">Mapping Keys</h2>
+    <p>
+    <img src="images/keymap.jpg" alt="The keymap configurator"
+      title="The keymap configurator" style="float: right"/> These is
+the screen where you can set up input. Each direction, plus start and
+select, can have one keyboard key and one joystick button assigned to
+it.</p>
+    <p>The key mapping screen is only responds to the keyboard, and
+isn't affected by your key mappings (so in case you screw up, you can
+fix it). It can only be controlled by the arrow keys, and enter. Note
+that if you map your regular arrow keys, enter, or any of the other
+automatically configured keys here, they will only work as their new
+function, not their old one.</p>
+    <dl>
+      <dt>Arrow keys</dt>
+      <dd>Move the selector (the white highlighted key)</dd>
+      <dt>Enter</dt>
+      <dd>Prompt for a new key or joystick button.</dd>
+      <dt>Escape</dt>
+      <dd>Cancel mapping of a key, or return to the main menu</dd>
+    </dl>
+
+    <h1 id="tips">Tips</h1>
+    <p><em>Don't return to the center after each step.</em> This
+creates unnecessary foot movements. While this might make it easier to
+keep your bearings on simple songs, it makes harder and faster ones
+nearly impossible</p>
+    <p><em>Try practicing songs on 1.5x or 2x or one of the constant BPM modes.</em> Some songs,
+especially slow ones, are easier to read on higher speeds or when the scrolling speed is constant.</p>
+    <p><em>Don't stomp.</em> Stomping might help you pick up the beat
+better, but it also tires you out much faster. When you're tired, you
+move slower and less accurately, and begin missing the beat
+anyway.</p>
+    <p><em>Remember, the steps go with the music.</em> It can be hard
+to hear the part of the music the steps are following, especially if
+it's not the main beat of the song. Try listening to the song with
+headphones while watching the steps, and find which part of the rhythm
+the steps follow.</p>
+    <p><em>Know your limits, and stay healthy.</em> Keep hydrated;
+    drink water between songs. If you twist an ankle or injure
+    yourself, take a break. Stretch before and after playing.</p>
+
+    <h1 id="files">Important Files</h1>
+    <h2 id="files.config">Main Configuration</h2>
+    <p>The file <tt><em>rc_path</em>/pydance.cfg</tt> is where your
+options are stored. This file can be edited in a plain text editor.
+Most of these can be changed by using the menus in the game, but the
+following ones aren't (0 means off, and 1 means on):</p>
+    <dl>
+      <dt>autogen 1|0</dt>
+      <dd>On by default. If this is turned off, <tt>pydance</tt> won't
+automatically generate steps for other modes when it knows about 4 or
+5 panel steps.</dd>
+      <dt>grading 1|0</dt>
+      <dd>If this is off, <tt>pydance</tt> won't display the grading screen
+after a song.</dd>
+      <dt>showcombo 1|0</dt>
+      <dd>If this is off, <tt>pydance</tt> won't display your combo count.</dd>
+      <dt>stickycombo 1|0</dt>
+      <dt>stickyjudge 1|0</dt>
+      <dd>If these are off, <tt>pydance</tt> will remove the combo count or
+step judging text from the screen after a few seconds.</dd>
+      <dt>masteroffset [number] (default 0)</dt>
+      <dd>Some systems have speakers or displays that take measurable
+time (in terms of affecting gameplay) to output a signal. If you have
+one of these, you can add an offset in milliseconds to every song you
+have. This should not be used if you have a lot of step files that are
+a specific number of milliseconds off. If you use it for this, all new
+files you get will be wrong, and no one else will be able to use your
+original files.</dd>
+      <dt>onboardaudio 0|1</dt>
+      <dd>Some systems (especially laptops) use sound cards or drivers
+that resample sound in strange ways, which may make <tt>pydance</tt> play songs
+such that they "drift" in relation to the steps. If you seem to be
+having drifting issues in all the songs you play, you should try
+turning this on.</dd>
+      <dt>songdir [dir1:dir2:dir] (or on Windows, dir1;dir2;dir3)</dt>
+      <dd>This is a list of directories where <tt>pydance</tt> should look for
+songs (.dance files, backgrounds and banners, and the audio itself).
+Generally installing <tt>pydance</tt> gives you a system-wide location to place
+songs (that all users will have access to), and a local one in your
+home directory.</dd>
+      <dt>coursedir [dir1:dir2:dir] (or on Windows,
+dir1;dir2;dir3)</dt>
+      <dd>This is a list of directories where <tt>pydance</tt> should look for
+courses (.crs files). Installing <tt>pydance</tt> gives you a system-wide
+location to place courses (that all users will have access to), and a
+local one in your home directory.</dd>
+
+      <dt>usepsyco 1|0</dt>
+      <dd>Try to use the Psyco optimizing compiler for Python (<a
+href="http://psyco.sf.net">http://psyco.sf.net</a>). This is on by
+default, and can give 30-50% speed gains on slower systems. However,
+it also uses substantially more memory (which is usually not a
+problem, since <tt>pydance</tt>'s code memory footprint is small relative to
+its song data). Psyco is currently only available for IA32 (Intel and
+AMD) systems.</dd>
+    </dl>
+
+    <h2 id="files.input">Input Configuration</h2>
+    <p><tt><em>rc_path</em>/input.cfg</tt> contains your keyboard and
+joystick mapping. This is a "pickled" Python file, and can't be edited
+in a text editor. It will be automatically regenerated, so if you
+badly mess up your input settings, just delete this file to restore
+the controls to their defaults.</p>
+
+    <h2 id="files.records">Records</h2>
+    <p><tt><em>rc_path</em>/records</tt> stores your best grades on
+each song. It is also a pickled Python file. Deleting this will reset
+all your grades.</p>
+
+    <h1 id="dance">Creating .dance Files</h1>
+    <p>.dance is designed to be easily written by hand, and work for
+all possible dancing or beat games. If you're interested in writing
+tools to work with .dance files, read the <tt>docs/dance-spec.txt</tt>
+file included with <tt>pydance</tt>.</p>
+    <p>.dance files are broken up into 3 parts &mdash; the header
+information (often called the metadata), the text information, and the
+step information. All parts are in UTF-8 encoding (which is compatible
+with standard ASCII), and all filenames in .dance files are
+case-sensitive. If you begin any line with a #, it will be ignored as
+a comment.</p>
+    <h2 id="dance.header">Header Information</h2>
+    <p>The header gives important information about the song that
+<tt>pydance</tt> uses to load or categorize it. A sample header (for,
+mysong.dance) might look like:</p>
+    <pre>filename mysong.ogg
+title My Song
+artist Me &amp; I
+author Also Me
+banner mysong-ban.png
+background mysong-bg.jpg
+bpm 140.2
+end</pre>
+    <p>The header <em>must</em> end with 'end'.</p>
+    <h3 id="dance.header.tags">A List of .dance Tags</h3>
+    <dl>
+      <dt>filename</dt><dd>The music file to play when the steps are
+loaded. There is no default setting; you must specify a music file to
+load the steps.</dd>
+      <dt>title</dt><dd>The title of the song.</dd>
+      <dt>subtitle</dt><dd>The subtitle of the song (displayed in a
+smaller font underneath the title).</dd>
+      <dt>artist</dt><dd>The artist or composer of the song.</dd>
+      <dt>mix</dt><dd>The mix of the song (where it will appear in
+"Sort By Mix" mode).</dd>
+      <dt>bpm</dt><dd>The beats per minute of the song.</dd>
+      <dt>bpmdisplay</dt><dd>A list of BPMs (separated by commas) that
+will be displayed on the song song selector.</dd>
+      <dt>gap</dt><dd>The time, in milliseconds, between the start of
+the arrows, and the start of the song. If the first beat occurs 300
+into the song, this should e.g. be -300.</dd>
+      <dt>startat, endat</dt><dd>Second offsets into the music at
+which to start playing it, and end playing it. Normally this is the
+start of the song and the end of the song, and since music files are
+large, it's preferred that you cut them down to the proper size rather
+than using these tags.</dd>
+      <dt>banner, background, cdtitle</dt><dd>Images to go with the
+song. The banner is a 256x80 image that will be displayed on the song
+selector. The background is 640x480 or 320x240 and will be displayed
+while the song is playing. The CD title is a 64x40 (or so) image to be
+displayed on the song selector, as well.</dd>
+      <dt>preview</dt><dd>Set the time and length of the preview to be
+played in the song selector. <tt>preview 10, 15</tt> plays a 15 second
+preview, starting 10 seconds into the song.</dd>
+      <dt>md5sum</dt><dd>The MD5 checksum string of the music file, to
+verify whether or not the correct one is being used.</dd>
+      <dt>valid</dt><dd>If <tt>valid 0</tt> is in the header, then
+this file won't be selected for endless mode, random courses, or when
+pressing select.</dd>
+      <dt>revision</dt><dd>The last date the file was modified, in
+YYYY.MM.DD format.</dd>
+      <dt>movie</dt><dd>A background movie to play with the file.
+<tt>pydance</tt> currently only plays MPEG-1 files, but .dance files can
+specify any format.</dd>
+    </dl>
+    <h2 id="dance.text">Text Data</h2>
+    <p>The text data section contains a description of the file, and
+lyrics. Both sections are optional.</p>
+    <h3 id="dance.text.desc">The Description</h3>
+    <p>The description section contains a description of the song. The
+format roughly follows the DPKG description format: All lines of text
+start with a space. Whitespace, including newlines, is ignored. A
+period ('.') on a line by itself (with a space before it!) is to be
+interpreted as a paragraph separator. An 'end' on a single line, with
+no space before it, ends the description. e.g.</p>
+    <pre>DESCRIPTION
+ This is a description of the file. It is not
+ particularly interesting, but here it is.
+ Hooray.
+ .
+ Here is another paragraph.
+end</pre>
+    <h3 id="dance.text.lyrics">Lyrics</h3>
+    <p>The lyrics section contains lyric timing information. The
+format of each line is a float, an integer, and then a string. The
+integer specifies the lyric "channel"; lyrics in the same channel
+should overwrite each other, appear in the same place on the screen,
+etc. The float is the time into the song during which the lyric should
+appear, irrespective of the 'gap' value. e.g.</p>
+    <pre>LYRICS
+1.0 1 I will be displayed 1 second into the song.
+2.0 2 Two seconds in and elsewhere on the screen!
+3.0 1 I'll cover up the first lyric since we're on the same channel.
+end</pre>
+    <h2 id="dance.steps">Step Data</h2>
+    <p>Step sections must have at least three lines. First the game,
+then the difficulty and rating, and at the end, "end". In between that
+can be any number of step specifiers, e.g.</p>
+    <pre>SINGLE
+MANIAC 8
+q 1000
+q 0001
+end</pre>
+    <p>This makes steps for SINGLE (4 panel, 1 player) mode, MANIAC
+difficulty, with a rating of 7. First a left step, then a right step,
+and then the song ends.</p>
+    <p>The string of numerals indicates which directions to press at
+that time; from left to right they are the same as the directions
+displayed in <tt>pydance</tt>'s top arrows left to right (e.g. left, down, up,
+right for 4 panel). A 1 indicates a normal arrow or the end of a hold
+arrow; a 3 indicates the start of a hold arrow; a 5 indicates a secret
+arrow.</p>
+    <p>.dance has the following types of notes (specified by a single
+lowercase character starting the line) (a "beat" is a non-overlapping
+but touching pair of arrows, on 1x speed):</p>
+    <table style="width: 80%; margin-left: 10%">
+      <tr><td>o</td><td>whole</td><td>4 beats</td></tr>
+      <tr><td>h</td><td>1/2</td><td>2 beats</td></tr>
+      <tr><td>q</td><td>1/4</td><td>1 beat</td></tr>
+      <tr><td>e</td><td>1/8</td><td>0.5 beats</td></tr>
+      <tr><td>w</td><td>1/12</td><td>0.3<span style="text-decoration:
+overline">3</span> beats</td></tr>
+      <tr><td>s</td><td>1/16</td><td>0.25 beats</td></tr>
+      <tr><td>f</td><td>1/24</td><td>0.1<span style="text-decoration:
+overline">6</span> beats</td></tr>
+      <tr><td>t</td><td>1/32</td><td>0.125 beats</td></tr>
+      <tr><td>u</td><td>1/48</td><td>0.08<span style="text-decoration:
+overline">3</span> beats</td></tr>
+      <tr><td>x</td><td>1/64</td><td>0.0625 beats</td></tr>
+      <tr><td>n</td><td>1/192nd</td><td>0.0208<span
+style="text-decoration: overline">3</span> beats</td></tr>
+    </table>
+    <p>.dance also has single uppercase character commands.
+<tt>B&nbsp;[new&nbsp;BPM]</tt> changes the BPM at that point to a new
+value. <tt>S&nbsp;[seconds]</tt> stops the arrows at that point for a
+certain number of seconds. <tt>L [channel] [text]</tt> displays a
+lyric, on a particular channel, with the given text (this lets you
+have different lyrics for each difficulty).</p>
+    <p>If you're making double or couple steps, separate the two
+players' steps with spaces, like <tt>q&nbsp;1001&nbsp;0110</tt>.</p>
+    <p>The game modes that <tt>pydance</tt> supports follows: SINGLE, VERSUS,
+COUPLE, DOUBLE (these are for 4 panel mode), 3PANEL, 3VERSUS, 3COUPLE,
+3DOUBLE, 5PANEL etc, 6PANEL etc, 8PANEL etc, 9PANEL etc, EZ2SINGLE,
+EZ2VERSUS, EZ2COUPLE, EZ2DOUBLE, EZ2REAL, REALVERSUS, REALCOUPLE,
+REALDOUBLE, PARAPARA, PARAVERSUS, PARACOUPLE, PARADOUBLE, DMX,
+DMXVERSUS, DMXCOUPLE, DMXDOUBLE. The definitive version of this list
+is in the <tt>games.py</tt> file. If steps aren't found for a versus
+mode, the single mode steps will be used. If steps aren't found for
+any mode but they exist for 4 or 5 panel, then steps for every other
+mode will be autogenerated (but they might not be very fun).</p>
+
+    <h1 id="themes">Creating Graphical Themes</h1>
+    <p>The easiest way to explain graphical themes is to look at the
+existing ones, so you should do that before reading on. These are in
+<tt>themes/gfx/NxN</tt>, where N is some number, the dimensions of the
+arrow.</p>
+    <p>Every theme must contain a file <tt>is-theme</tt> (no
+extension) in the same directory.</p>
+    <h2 id="themes.arrows">The Arrows</h2>
+    <p><tt>pydance</tt> uses one file per arrow direction, but it can also
+rotate arrows 90 degrees if necessary; so if you have an up arrow and
+a diagonal up right arrow, it can make all 8 directions (minus
+center). Each file is named
+<tt>arr_<em>type</em>_<em>dir</em>_&lt;number&gt;.png</tt>. The "type is one
+of c ("colored" arrow, the ones that scroll", n (the top arrows that
+flash), or s ("stepped", the top arrows that are displayed when you
+step on them). If the type is n, the number must be 0; if the type is
+s, the number must be 4. Otherwise, for color arrows, 0 means on-beat
+arrows (quarter notes), 2 is for half-beat arrows (8th notes), and 1
+and 3 are for all other arrows; 1 and 3 will be alternated between if
+a lot of arrows on the beat or half beat occur in a row.</p>
+    <p>Arrows are animated if there is more than one NxN image tiled
+in them (e.g. a 64x64 arrow that is 128x128 has four frames of
+animation, tiled 2x2). The vertical tiling is animated during the
+space of one beat. The horizontal tiling is animated over beats, and
+loops when it reaches the end. So a 168x112 image for a 56x56 arrow,
+contains six frames of animation (3x2). In the space of one beat, it
+loops over the first three frames, and then over the next beat, it
+goes to the next three frames, and then back to the first three.</p>
+    <h2 id="themes.lifebar">The Lifebar</h2>
+    <p>You also need to provide a lifebar.png, an oni-bar.png, and
+an oni-empty.png. lifebar.png should be 408x28 pixels, at least. This
+is in turn split into two 204x28 images; the left half should be the
+full lifebar, and the right half should be the empty one. If you want
+to animate the lifebar, stack images on top of each other (e.g.
+408x56, 408x84, and so on).</p>
+    <p>oni-bar.png can be any size, and is the "bar" that will be
+displayed in your battery lifebar. It will be scaled to fit depending
+on how much life the player can have. oni-empty.png is a 204x28 image
+that the scaled oni-bar.png image will be displayed over.</p>
+    <h2 id="themes.zip">Zipping Themes</h2>
+    <p>If you want to distribute your theme as a .zip file
+    (recommended for completed themes), make it so that it unzips to
+    the current directory, e.g. the file names are just <tt>arr_n_d_0.png</tt>
+    instead of <tt>mytheme/arr_n_d_0.png</tt>. Make sure the is-theme
+    file gets included.</p>
+
+	<h1 id="fontthemes">Creating Font Themes</h1>
+	Each font theme has a configuration file, <tt>themes/font/<em>theme</em>.cfg</tt>, containing the following sections:
+	<dl>
+		<dt><tt>[global]</tt></dt>
+		<dd>Settings global to the theme and theme defaults:
+		<dl>
+			<dt><tt>title=<em>theme_name</em></tt></dt>
+			<dd>The name under which the theme appers in the menus and in the configuration file.</dd>
+			<dt><tt>font=<em>font_file</em>.ttf</tt></dt>
+			<dd>Filename of the default font for this theme. If missing, the default Pygame font is used.</dd>
+		</dl>
+		</dd>
+		<dt><tt>[<em>purpose</em>]</tt></dt>
+		<dd>Specification of font and size to be used for each UI element. See the included font theme configuration files for the list of elements to be specified. Note that only <tt>size</tt> option needs to be specified.
+		<dl>
+			<dt><tt>font=<em>font_file</em>.ttf</tt></dt>
+			<dd>Filename of the font to be used for this element. If missing, the font specified in the <tt>[global]</tt> is used.</dd>
+			<dt><tt>size=<em>font_size</em></tt></dt>
+			<dd>An integer specifying size for fixed-sized elements, maximum size for elements whose font size is adjusted to fit in a given width, and base size for elements whose scaling is handled by the UI code.</dd>
+		</dl>
+		</dd>
+	</dl> 	
+	<h1 id="i18n">Translating <tt>pydance</tt></h1>
+	<tt>pydance</tt> uses <tt>gettext</tt> for internationalization, with the following languages currently supported:
+	<ul>
+		<li>English (default)</li>
+		<li>Catalan</li>
+	</ul>
+	To create a new translation on a POSIX system, begin by executing the following in the <tt>pydance</tt> source directory:
+	<pre>
+pydance$ ./setup.py                         # Create Makefile
+pydance$ make uptrans                       # Create pydance.pot in po/
+pydance$ cd po
+pydance/po$ mv pydance.pot <em>XX</em>.po            # <em>XX</em> is the code of the language.</pre> 
+	Then, edit <tt><em>XX</em>.po</tt> with the translations. See 
+	<a href="http://www.gnu.org/software/gettext/manual/gettext.html#PO-Files">GNU <tt>gettext</tt> Manual</a> for information on this format.
+	Finally, reinstall <tt>pydance</tt> or run
+	<pre>
+pydance/po$ make generate</pre>
+	This will create a <tt>mo/</tt> directory with compiled translation files.
+    <h1 id="contact">Contact the Developers</h1>
+    <h2>Email</h2>
+    <p>There are two mailing lists for <tt>pydance</tt>. The first is <a
+href="mailto:pyddr-discuss@icculus.org">pyddr-discuss</a> (<a
+href="mailto:pyddr-discuss-subscribe@icculus.org">subscribe</a>),
+which is for general discussion of <tt>pydance</tt>, questions about running
+it, making dance files, announcements of new releases, and so on. It
+is low traffic, at most 10 or 15 messages a month, and subscribing is
+recommended if you use <tt>pydance</tt>. The second is <a
+href="mailto:pyddr-devel@icculus.org">pyddr-devel</a> (<a
+href="mailto:pyddr-devel-subscribe@icculus.org">subscribe</a>), which
+is a list for discussing <tt>pydance</tt> development. This list is even lower
+traffic, containing mostly release announcements. This is a good place
+to send patches or bug reports.</p> <p>If you don't want to sign up
+for a mailing list but do want to report a bug, you can email the <a
+href="http://www.debian.org/Bugs/Reporting">Debian Bug Tracking
+System</a> at <a
+href="mailto:submit@bugs.debian.org">submit@bugs.debian.org</a>. The
+first line of your email should be "Package: pydance".</p>
+    <p>Simon Tatham (who probably doesn't even know about <tt>pydance</tt>) has
+written a <a
+href="http://www.chiark.greenend.org.uk/~sgtatham/bugs.html"
+title="How to Report Bugs Effectively">good document on how to report
+bugs</a> in any program.</p>
+
+    <h2>IRC</h2>
+    <p><tt>pydance</tt> has an IRC channel, #pyddr, on <a
+href="http://www.freenode.net" title="The Freenode IRC
+network">irc.freenode.net</a>. It is usually active, and can help you
+fix problems with <tt>pydance</tt> (if you've already tried the instructions
+here, and the ones in the <a
+href="http://icculus.org/pyddr/faq.php">official FAQ</a>). The main
+developers are in the channel as "Pavel" (Pavel Krivitsky) and "P2E"
+(Brendan Becker). This is not, however, a good place to report bugs,
+since they can get lost easily.</p>
+
+    <h1 id="faq">FAQ</h1>
+    <p>This is not the <a
+href="http://icculus.org/pyddr/faq.php">official <tt>pydance</tt> FAQ</a>,
+which you should check in addition to this one before asking
+questions. This FAQ deals with very frequently asked questions with
+unchanging answers.</p>
+    <dl>
+      <dt>What is 'pyDDR'?</dt>
+      <dd>Before version 0.7.2, <tt>pydance</tt> was named pyDDR. This was
+because it only played DDR at the time. Now, in addition to being
+possible trademark violation, the name is inaccurate; <tt>pydance</tt> plays
+many dancing games in addition to Dance Dance Revolution.</dd>
+      <dt>What is 'Bemani'?</dt>
+      <dd>Bemani is the name of Konami of Japan's music game division,
+that produces many of the popular arcade dancing and music games.
+Other non-Konami music games are also often called "bemani" by
+association. The word itself is a shortening of "Beatmania", the first
+beat game produced by Konami.</dd>
+      <dt>Where can I get songs?</dt>
+      <dd>Aside from the free songs available on the <tt>pydance</tt> site,
+there are some places to get other songs and steps (often called
+"simfiles"). BemaniStyle maintains <a
+href="http://www.bemanistyle.com/sims/sims.php?cat=1"
+title="BemaniStyle Original Simfiles">an enormous database</a> of
+files people have created, usually in .sm or .dwi formats. <a
+href="http://www.ddruk.com">DDRUK</a> has simfiles for most of the
+official DDR songs, available via <a
+href="http://bitconjurer.org/BitTorrent/">BitTorrent</a>. However,
+downloading any of these songs may be copyright infringement.</dd>
+      <dt>Why does <tt>pydance</tt> crash with a segmentation fault, or
+"parachute error"?</dt>
+      <dd>You are trying to play MP3s of a type that is not supported
+by SDL_mixer. Change your song preview mode to "Safe". If that doesn't
+work, try converting your songs to Ogg, or removing the tags
+(instructions on how to do this are available in the <a
+href="http://icculus.org/pyddr/faq.php">official <tt>pydance</tt> FAQ</a>.</dd>
+    </dl>
+
+    <h1 id="license">License</h1>
+    <p>This document is Copyright &copy; 2004&ndash;2008 Joe Wreschnig and Pavel Krivitsky, and may
+be distributed and modified under the same terms as <tt>pydance</tt> itself.
+Many games and companies referred to above are trademarks of their
+respective mark holders, and no challenge is made to the validity of
+those marks; the only name we claim as ours is 'pydance'. Images from
+<a href="http://www.levelsix.com">Level Six</a> used with
+permission.</p>
+  </body>
+</html>
+
+

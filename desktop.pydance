@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Encoding=UTF-8
+Name=pydance
+Icon=pydance.png
+GenericName=Dancing Game
+Exec=pydance
+Categories=Application;Game;ArcadeGame;Music

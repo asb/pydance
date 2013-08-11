@@ -1,0 +1,18 @@
+MANPAGES += docs/man
+UTILS += utils/findbpm.py
+ZIPMODS += config.py announcer.py fontfx.py menus.py menudriver.py gfxtheme.py songselect.py fileparsers.py colors.py player.py endless.py gradescreen.py lyrics.py steps.py util.py error.py options.py games.py judge.py dance.py stepfilters.py gameselect.py lifebars.py scores.py combos.py listener.py grades.py stats.py arrows.py pad.py ui.py courses.py records.py interface.py courseselect.py fonttheme.py i18n.py
+ALLMODS += $(ZIPMODS) constants.py
+
+DATA += themes images sound CREDITS
+
+clean:
+	rm -f *.pyc pydance.zip
+
+distclean: clean
+	rm -f pydance.cfg Makefile po/pydance.pot
+
+pydance.zip:
+	zip pydance.zip $(ZIPMODS)
+
+uptrans:
+	xgettext *.py -o po/pydance.pot

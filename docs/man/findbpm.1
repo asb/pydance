@@ -1,0 +1,17 @@
+.TH findbpm 1 "June 26th, 2003"
+.SH NAME
+findbpm \- average keypresses over the length of a song to find the BPM
+.SH SYNOPSIS
+\fBfindbpm \fIsong.ogg\fR
+.SH DESCRIPTION
+This script plays a song file (in Ogg Vorbis or MP3 format) and lets you
+tap along on the spacebar, calculating the BPM (beats per minute) in the
+song as you go. It also gives you an offset in milliseconds of when
+you started tapping, compared to when the song started. You can then
+use these two values to create a step file for that song.
+.SH BUGS
+This is only as accurate as your sense of rhythm. :)
+.SH AUTHORS
+Brendan Becker <tgz@orotech.net> and Joe Wreschnig <piman@debian.org>.
+.SH SEE ALSO
+\fBpydance\fR(6)

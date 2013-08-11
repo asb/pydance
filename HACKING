@@ -1,0 +1,59 @@
+This is a rough outline of the pydance source code. It is not
+authoritative, and everything in it should checked against the real
+source code and comments.
+
+Basic Design Philosophies
+-------------------------
+Everything should be strongly object-oriented. Code and data should be
+moved as much as possible into common parent classes. We should not
+sacrifice code clarity for speed except in extreme cases.
+
+Overview of Program Flow
+------------------------
+First pydance.py is started. constants.py is imported, and constants and
+some top-level variables are defined, such as the event handlers
+and the configuration files.
+
+From there pydance.py loads all files it finds it finds in the 'songdir'
+variable, using fileparsers.py. From there it calls menudriver.py, which
+instantiates the game's main menu.
+
+"Play Game" runs gameselect.py, which in turns runs songselect.py or
+endless.py. From there the code in optionscreen.py may be executed to
+change options, or dance.py will be run to start a game.
+
+dance.play takes the list of songs to play and the relevant configuration
+settings. It then instantiates the players (players.py) and has them
+play through the list of songs, calling dance.dance on each one.
+
+The players are in charge of managing their sprite groups, as well as
+creating and updating all the sprites in them. The dance.dance loop
+hands keypresses off to player, which in turn hands them off to Judge
+(judge.py). The judge rates the steps, and then the player sends the
+step rating and related information to all its "listeners" -- the lifebar,
+score, and so on.
+
+After the song list is over dance.play makes the grade screen, and
+then passes control back to endless/songselect.
+
+Exiting the main menu returns control to pydance.py, which writes the
+configuration file out and then exits the program.
+
+Naming Conventions
+------------------
+Class names LookLikeThis. Local variables and functions look_like_this,
+although short ones may for convenience looklikethis, or llt.
+
+Exceptions are to be used for exceptional circumstances only. They
+should not be used where an 'if' condition would suffice.
+
+Class names should begin with Abstract iff they are not to be instantiated,
+but are to provide functionality for subclasses.
+
+Private functions and variables should begin with _. Variables that
+begin with _ must be private.
+
+Use GvR's tuple/list distinction rather than the immutable vs. mutable one.
+This means sequences with different types in them should be tuples, and
+sequences with the same types should be lists (this means x,y coordinate
+pairs should be lists).

@@ -1,0 +1,84 @@
+About pydance -- http://icculus.org/pyddr/
+------------------------------------------
+Have you ever gone to an arcade and seen some crazy girl busting moves
+on some sort of metal panel of sorts, or a guy making a fool of
+himself trying to dance without watching the screen? Well, that game
+is probably Dance Dance Revolution, or DDR for short, which has been a
+hit in Asian countries for awhile and is finally getting popular in
+Europe and North America. It might also have been a similar game, such
+as Pump It Up, or EZ2 Dancer.
+
+pydance lets you play these games, and others like them, on your
+computer, either with the keyboard or with a custom controller. What
+you do is watch the screen as colored arrows move up the screen. As
+soon as they cover up stationary arrows at the top, you step (or
+press) the corresponding direction, in time with the beat of the
+music.
+
+You don't need a dance mat to play pydance! It's a lot more fun if you
+do, but you can also use your keyboard or gamepad.
+
+System Requirements
+-------------------
+These are rough guidelines. Depending on your graphical theme,
+operating system, and so on, these requirements can differ. Although
+it is possible to install and play pydance on systems slower than
+this, the frame rate (and input latency) will be high enough that it
+won't be much fun.
+
+Operating System
+    GNU/Linux (Debian is the easiest to use with pydance), Mac OS X,
+    or Windows 2000 or higher. If Windows is your OS of choice, we can't
+    help you debug. If Mac OS X is your OS of choice, we'll have plenty of
+    trouble as well, but it's likely to work in the end.
+Video Card
+    A video card capable of doing 640x480x16bpp, which is most video
+    cards made since 1995. More recent cards will be faster, but many old
+    cards (ATI Radeon 7000, Matrox G200, nVidia TNT1) will be able to run
+    pydance acceptably.
+Processor
+    We recommend a 1 GHz IA32 or 600 MHz PPC processor, or better, for
+    pydance. However, pydance will run acceptably on a P3-500 or
+    equivalent.
+RAM
+    At least 64MB is required. 128MB is very strongly
+    recommended. pydance uses RAM to cache graphics, so more RAM means the
+    UI will respond faster.
+Hard Disk Space
+    pydance requires about 5MB (around 50MB if you don't already have
+    Python, SDL, or Pygame installed) of hard drive space to
+    install. Songs take 1MB to 6MB each, on average. If your RAM is low,
+    you will also need hard drive space for swap.
+
+Getting pydance
+---------------
+To get the latest version of pydance, visit the pydance download
+page at http://icculus.org/pyddr/get.php. It is available as a .zip or
+a .tar.gz file. The site also contains information about installing
+from packages for Debian, Mandrake, and Gentoo GNU/Linux, and also has
+a disk image for Mac OS X users.
+
+Otherwise, to run pydance, you can often just download the source,
+unpack it, and double click on pydance.py (or run ./pydance.py). The
+INSTALL file included with pydance has detailed installation
+instructions for Unix.
+
+Complete documentation is available in docs/manual.html.
+
+Contact
+-------
+Two mailing lists exist for pydance, pyddr-discuss@lists.debian.org
+and pyddr-devel@lists.debian.org. The pydance manual has more
+information about them.
+
+If you don't want to sign up for a mailing list but do want to report
+a bug, you can email the Debian Bug Tracking System at
+submit@bugs.debian.org. The first line of your email should be
+"Package: pydance".
+
+pydance has an IRC channel, #pyddr, on irc.freenode.net. It is usually
+active, and can help you fix problems with pydance (if you've already
+tried the instructions in the manual, and the ones in the official
+FAQ). The main developers are in the channel as "Pavel" (Pavel
+Krivitsky) and "P2E" (Brendan Becker). This is not, however, a good
+place to report bugs, since they can get lost easily.

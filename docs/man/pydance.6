@@ -1,0 +1,87 @@
+.TH pydance 6 "June 2nd, 2003"
+.SH NAME
+pydance \- a dancing simulator game
+.SH SYNOPSIS
+\fBpydance\fR [\fB\-\-filename \fIfilename \fR[ \fB\-\-mode\fI mode \fB\-\-difficulty\fI difficulty\fR ] ]
+.SH OPTIONS
+.IP \-\-help,\ \-h
+Display a brief summary of command line options.
+.IP \-\-version,\ \-v
+Display the version of pydance (and features found, e.g. Psyco).
+.IP \-\-filename\, \-f
+Load and play a single file, then quit. By default, this is in
+SINGLE (4 panel) mode, on BASIC difficulty.
+.IP \-\-mode,\ \-m
+Use a particular mode (e.g. VERSUS, 6PANEL, DMX). This only has an effect
+when you also use \fB\-\-filename\fR.
+.IP \-\-difficulty,\ \-d
+Use a particular difficulty (e.g. TRICK, SMANIAC). This only has an effect
+when you also use \fB\-\-filename\fR.
+.SH DESCRIPTION
+pydance is much like the popular arcade game "Dance Dance Revolution", in
+which you stand on a mat on the floor, with 4 buttons pointing forward,
+backwards, left, and right. Arrows scroll across the screen, and you must
+step on the arrows on the mat when they reach the top. These steps
+happen in time with music in the background, causing a rough approximation
+of dancing.
+.PP
+However, pydance also plays more than DDR - it can simulate games like
+Technomotion, Pop'n'Stage, Pump It Up, Para Para Paradise, and Dance ManiaX
+(also called Dance Freaks).a
+.PP
+pydance supports most of the features of these games, such as background
+and banner images for each song, multiple difficulty levels, freeze
+arrows (arrows you have to remain standing on for a length of time), BPM
+changes and stops, lyric displays, and so on. pydance also allows you to
+use a real DDR mat if you have a Playstation to PC joystick adapter supported
+by the ddrmat kernel module for Linux (which is a modified version of the
+gamecon kernel module), or a Playstation to USB joystick adapter and the USB
+joystick driver, for any OS. If you lack a mat, you can play on the
+keyboard, but it's much less fun.
+.PP
+You can also make your own step files to new music, in pydance's \fB.dance\fR
+format. \fIdance-spec.txt\fR included with pydance documents this format.
+pydance can also read the popular Windows \fB.dwi\fR and \fB.sm\fR formats.
+.SH USAGE
+The first player's arrows and settings are controlled by the I, J, ,, and L
+keys, and the second player's by the arrow keys. Enter starts a song or
+activates a menu item.
+.PP
+pydance is documented more completely in the \fIREADME.html\fR file included
+with it.
+.SH FILES
+.IP /usr/share/games/pydance/songs,\ /usr/local/share/games/pydance/songs,\ ~/.pydance/songs
+By default, pydance will look in these directories for your songs, step files,
+and other game data. You can configure this with the \fBsongdir\fR
+option in your pydance.cfg file.
+.IP
+Note that for DWI files, you will need to put everything (the music file,
+lyric file, background, and banner) in its own separate directory, and
+that directory inside \fIanother\fR subdirectory in the \fIsongs\fR
+folder. This is a limitation of the DWI format; it uses its path name
+and files in the same directory, rather than specifying things in the
+file itself like .dance files do.
+.IP /usr/share/games/pydance/courses,\ /usr/local/share/games/pydance/courses,\ ~/.pydance/courses
+Similar to above, but for course files. You can use \fBcoursedir\fR to
+override this.
+.IP /etc/pydance.cfg,\ ~/.pydance/pydance.cfg
+pydance configuration files. The settings in your local one override
+the system-wide settings.
+.IP ~/.pydance/records
+Your top scores for each song. This is a pickled Python file. It can be
+safely deleted to reset your scores.
+.IP ~/.pydance/input.cfg
+Your input settings. This is a pickled Python file. It can be safely
+deleted to reset your input configuration.
+.IP /usr/share/games/pydance
+Various data needed by pydance, such as background music and Python modules.
+.SH AUTHORS
+Brendan Becker <tgz@orotech.net>, Joe Wreschnig <piman@debian.org>, and Pavel Krivitsky <pavel@krivitsky.name>, with help from many others.
+.PP
+Many of the other dancing games mentioned here are trademarks of their
+respective owners.
+.SH SEE ALSO
+\fBfindbpm\fR(1),
+README included with pydance,
+manual.html included with pydance,
+dance-spec.txt included with pydance.

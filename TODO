@@ -1,0 +1,170 @@
+Required for 1.0
+----------------
+Empty "Bugs" section of BUGS file.
+No crashes or major bugs for 5 days after the last CVS check in.
+
+A Comprehensive List of Features for pydance 1.2
+(with ideas on how to do them)
+------------------------------------------------
+
+* UI Rework
+   Not really the extent that I reworked it between 0.8 and 0.9,
+   but tweak the existing ones, space them better, add more
+   animation/fading/etc. This is kind of a vague goal, but I
+   think at this point the UI should be developed iteratively.
+
+* Testing
+   pydance has no regression or unit tests. It could.
+
+* Records in courses
+   Your record in a course should be stored (best and "best passed").
+
+* MP3 Support
+   Pyxine, pymad, or waiting for libavcodec support in Pygame are
+   all options here. Note that Pyxine doesn't give enough timing
+   resolution by itself.
+
+* Hold Arrow Behavior
+   You should have to start holding arrows roughly when they start; in
+   the current version, you can just hold them down starting any time,
+   and it counts.
+
+* Automatic handling of different step ratings
+   This needs changes to the grading screen (to display them) and to
+   the JudgingDisplay code, to handle them.
+
+* Hold Arrow Drawing
+   Hold arrows should be split into three images, the top, the
+   repeating/stretched part, and the bottom. This requires some
+   big changes to all the themes, though.
+
+* Cleanup & Port to Python 2.3
+  - See if "string" in otherstring will help anywhere.
+  - Port pydance.log hackery to a Logger object!
+
+* Different game types for each player
+   This is the biggest feature I want. Have a game type list (rather
+   than single argument) passed to dance.play, probably in the
+   playlist itself. The real trick is making a sane UI for this.
+
+* Modifiers in courses
+   This requires players to reevaluate their modifiers between songs,
+   which shouldn't be too difficult. It might even half-work for some
+   modifiers already, but I haven't tested anything.
+
+* Combat (Disney-style / Dance Magic / Magic Dance) versus
+   This needs basically the same as the above, but player modifiers
+   need to be able to change even within songs (of course, if that
+   works, so does the above).
+
+* Challenge mode
+   This can probably be done in lifebars for various forms, or strange
+   Stats objects that will affect gameplay.  
+
+* Song Library
+   Sort of like DDR Max 2 USA, the idea is to have a database of songs
+   where you can just listen to them, or view information (like
+   DESCRIPTION) about them. Bonus points if you can watch the step
+   charts in the background or something.
+
+* No pad-based UI
+   (Pavel) piman: Here's a minor feature request, before I forget: a
+           menu option to disable the DDR mat for navigating through
+           songs, leaving only the keyboard for that, and activating
+           the mat only when actually "dancing".
+
+  This might be better served by decoupling UI events and pad events
+  entirely, and having two separate configurations.
+
+* Event rewrite
+   We should use Pygame's Event objects internally, for all the events
+   (UI, pad, and Listener). This is much better than the crap I wrote
+   before, and means (esp. for Listeners) that we can add more information
+   without having to rewrite many objects.
+
+* BG Animation
+   This is probably a Sprite like BGMovie is now, but with complicated
+   timing information about when to change. For good support of
+   existing SM/DWI animations, we'll need avcodec support.
+
+* 4 Player Mode
+   A lot of things in the pydance code assume 2 players. I like to
+   think a lot doesn't too (I tried to generalize where possible), but
+   it's all untested and I know there's a lot of work to do here.
+
+* Fix main menu code
+   390 lines of code are spent on the main menu, which is a million
+   times simpler than any other UI in the game.
+
+* BMS parsing
+   The BMS file format sucks to parse. However, many DDR steps come
+   in it. We should be able to load it. Since its grammar is nothing
+   like any other format, it will be a whole new section in fileparsers.
+   We don't need keysounding support for 1.2.
+
+* Dynamic course creation
+   pydance used to let you make a course in the song selector and play
+   it. That's a good idea.
+
+* Configurable UI events
+   The directions of a pad are configurable, but the UI events should be
+   too (especially, at least, cancel and confirm).
+
+* Use a rational number for beat counting
+   We should use rational numbers (i.e. (num, denom)) when generating
+   Step objects, for accuracy.
+
+* MSD parsing
+   The MSD format is a lot like the DWI format I think. pyDDR had an
+   old msd2step.py.
+
+* Finish KSF parser.
+   Specifically, do BPM changes. Though, KSF files thankfully are
+   becomming less popular.
+
+* vFolders?
+   (Pavel) piman: By the way, here is a feature idea: have a menu that
+           controls which songs are displayed on the list. E.g. "don't
+           display any songs that don't have steps with difficulty less
+           than 6", or something like that.
+
+   A good way to do this would be something like Evolution's vFolders
+   that let you search for arbitrary criteria. It would also fit okay
+   into the pydance UI ("New Folder", "Add Criteria"...) and current
+   song selector.
+
+   This would require arbitrary nesting of subfolders, maybe.
+
+   (Pavel) piman: Makes sense... So an interesting possibility might be
+           to have folders nested to a depth of 3 or so, with top-level
+           folders being what "S" key does right now.
+
+* Song installer
+   We should have a song package format that pydance should either be
+   able to load directly, or have an install-dance-package.sh that
+   does it. Similar things could exist for (trickier to install) DWI
+   or SM files.
+
+* Metadata from songs
+   The title, subtitle (VERSION), and artist can be gotten from the
+   audio file itself. It might also be possible to embed a DWI-like
+   syntax into an Ogg comment directly, and load that. But that's probably
+   a bad idea.
+
+* File format convertor
+   There should be something to convert DWI and SM files to .dance, and
+   maybe the other way around.
+
+* Fix endless mode
+   The UI is so ugly, and there should be more selection criteria.
+   Maybe we should merge this with Nonstop mode and have a "Loop"
+   checkbox.
+
+* FIXME: There are a lot of FIXMEs in the code. Some of them get
+  obsoleted over time, but most will still need fixing.
+
+* Dynamic grade in the corner of the screen as you play.
+
+* Halfass step generator, record steps as you play and do best-fit.
+
+* Ability to skip songs during Endless.

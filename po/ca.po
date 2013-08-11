@@ -1,0 +1,1974 @@
+# translation of ca.po to català
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Catux-LUG
+msgid ""
+msgstr ""
+"Project-Id-Version: ca\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-12-31 10:22-0800\n"
+"PO-Revision-Date: 2008-02-10 17:39+0100\n"
+"Last-Translator: Catux Translator Group <traduccio@catux.org>\n"
+"Language-Team: Catux <info@catux.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: announcer.py:33
+#, python-format
+msgid "E: Cannot load announcer theme '%s'."
+msgstr "E: No es pot carregar el tema vocal '%s'."
+
+#: colors.py:4 constants.py:188 constants.py:189 constants.py:190
+#: constants.py:191 constants.py:192 constants.py:193 constants.py:195
+msgid "red"
+msgstr "vermell"
+
+#: colors.py:5
+msgid "pink"
+msgstr "rosa"
+
+#: colors.py:6
+msgid "yellow"
+msgstr "groc"
+
+#: colors.py:7 constants.py:196 constants.py:197 constants.py:198
+msgid "green"
+msgstr "verd"
+
+#: colors.py:8
+msgid "cyan"
+msgstr "cian"
+
+#: colors.py:9 constants.py:194
+msgid "blue"
+msgstr "blau"
+
+#: colors.py:10 constants.py:199 constants.py:200 constants.py:201
+#: constants.py:202 constants.py:203 constants.py:204
+msgid "purple"
+msgstr "porpra"
+
+#: colors.py:11 constants.py:185 constants.py:186 constants.py:187
+msgid "orange"
+msgstr "taronja"
+
+#: colors.py:12
+msgid "aqua"
+msgstr "aqua"
+
+#: colors.py:13 colors.py:19 constants.py:184
+msgid "white"
+msgstr "blanc"
+
+#: colors.py:14 colors.py:20
+msgid "black"
+msgstr "negre"
+
+#: colors.py:15 scores.py:37
+msgid "gray"
+msgstr "gris"
+
+#: combos.py:121 gameselect.py:26 gameselect.py:75 gameselect.py:84
+#: gameselect.py:160 lifebars.py:219 options.py:44 options.py:54 options.py:64
+#: options.py:74 options.py:80 options.py:87 options.py:105 options.py:147
+msgid "Normal"
+msgstr "Normal"
+
+#: combos.py:121
+msgid "Greats or better increase a combo"
+msgstr "Genial o millor incrementa el combo"
+
+#: combos.py:122
+msgid "Oni-style"
+msgstr "Estil-Oni"
+
+#: combos.py:122
+msgid "Greats don't increase a combo, but also don't break it"
+msgstr "Genial no incrementa el combo, però no el posa a zero"
+
+#: combos.py:123
+msgid "Pump It Up"
+msgstr "Pump It Up"
+
+#: combos.py:123
+msgid "Okays or better increase a combo"
+msgstr "Bé o millor incrementa el combo"
+
+#: courses.py:23
+msgid "A Course"
+msgstr "Una recopilació"
+
+#: courses.py:85 courses.py:234 courses.py:268 courseselect.py:71
+msgid "BEST"
+msgstr "EL MILLOR"
+
+#: courses.py:91 courses.py:235 courses.py:269 courses.py:302 courses.py:303
+#: courseselect.py:80
+msgid "WORST"
+msgstr "EL PITJOR"
+
+#: courses.py:97 courses.py:270 courseselect.py:89
+msgid "LIKES"
+msgstr "PREFERIDES"
+
+#: courses.py:103 courses.py:271 courseselect.py:98
+msgid "DISLIKES"
+msgstr "ODIADES"
+
+#: courses.py:119
+msgid " was not found."
+msgstr " no s'ha trobat."
+
+#: courses.py:130
+msgid "No valid songs were found."
+msgstr "No hi ha cançons vàlides."
+
+#: courses.py:158
+#, python-format
+msgid "Player's %s #%d"
+msgstr "%s del jugador #%d"
+
+#: courses.py:159
+msgid "was not found."
+msgstr "no s'ha trobat."
+
+#: courses.py:168 fileparsers.py:811
+msgid " is an unsupported format."
+msgstr " és un format no suportat."
+
+#: courses.py:261 courses.py:279
+msgid "(Easy)"
+msgstr "(Fàcil)"
+
+#: courses.py:262 courses.py:280
+msgid "(Normal)"
+msgstr "(Normal)"
+
+#: courses.py:264 courses.py:282
+msgid "(Hard)"
+msgstr "(Difícil)"
+
+#: courses.py:265 courses.py:283
+msgid "(Expert)"
+msgstr "(Expert)"
+
+#: courses.py:268
+msgid "Best"
+msgstr "Millor"
+
+#: courses.py:269
+msgid "Worst"
+msgstr "Pitjor"
+
+#: courses.py:270
+msgid "Likes"
+msgstr "Preferides"
+
+#: courses.py:271
+msgid "Dislikes"
+msgstr "Odiades"
+
+#: courses.py:275 courses.py:306 courses.py:308
+msgid "Player's Picks"
+msgstr "Escollides pel jugador"
+
+#: courses.py:285
+#, python-format
+msgid "Random %d %s"
+msgstr "Aleatori %d %s"
+
+#: courses.py:288 courses.py:294
+msgid "random.choose(songs)"
+msgstr "selecció.aleatòria(cançó)"
+
+#: courses.py:291
+#, python-format
+msgid "All Random %d"
+msgstr "Tot aleatori %d"
+
+#: courses.py:305
+msgid "Primal Fear (Easy)"
+msgstr "Por del novell (Fàcil)"
+
+#: courses.py:307
+msgid "Primal Fear (Hard)"
+msgstr "Por del novell (Difícil)"
+
+#: courseselect.py:39 songselect.py:52
+msgid "Up / Down: Change song selection"
+msgstr "Amunt / Avall: selecciona la cançó"
+
+#: courseselect.py:40 songselect.py:53
+msgid "Left / Right: Change difficulty setting"
+msgstr "Esquerra / Dreta: canvia la dificultat"
+
+#: courseselect.py:41
+msgid "Enter / Up Right: Open a folder or start a course"
+msgstr "Retorn / Amunt Dreta: obre carpeta o recopilació"
+
+#: courseselect.py:42
+msgid "Escape / Up Left: Close a folder or exit"
+msgstr "ESC / Amunt Esquerra: tanca una carpeta o surt"
+
+#: courseselect.py:43
+msgid "Tab / Select: Go to a random course"
+msgstr "Tab / Select: vés a una recopilació aleatòria"
+
+#: courseselect.py:44
+msgid "Start: Switch to Options screen"
+msgstr "Start: vés a la pantalla d'opcions"
+
+#: courseselect.py:45 songselect.py:58
+msgid "F11: Toggle fullscreen - S: Change the sort mode"
+msgstr "F11: pantalla completa - S: canvia l'ordenació"
+
+#: courseselect.py:74
+#, python-format
+msgid " (Best #%d)"
+msgstr " (La %da millor)"
+
+#: courseselect.py:77
+msgid "Player's Best Unavailable"
+msgstr "No hi ha estadístiques del millor del jugador"
+
+#: courseselect.py:78 courseselect.py:87 courseselect.py:96
+#: courseselect.py:106
+msgid "(You need to play more songs!)"
+msgstr "(Has de ballar més cançons!)"
+
+#: courseselect.py:83
+#, python-format
+msgid " (Worst #%d)"
+msgstr " (La %da pitjor)"
+
+#: courseselect.py:86
+msgid "Player's Worst Unavailable"
+msgstr "No hi ha estadístiques del pitjor del jugador"
+
+#: courseselect.py:95
+msgid "Player's Likes Unavailable"
+msgstr "Preferides pel jugador no disponibles"
+
+#: courseselect.py:102
+#, python-format
+msgid " (Dislikes #%d)"
+msgstr " (La %da que m'agrada menys)"
+
+#: courseselect.py:105
+msgid "Player's Dislikes Unavailable"
+msgstr "Odiades pel jugador no disponibles"
+
+#: courseselect.py:215
+msgid "All Courses"
+msgstr "Totes les recopilacions"
+
+#: courseselect.py:370 songselect.py:512
+#, python-format
+msgid "Sort by %s"
+msgstr "Ordena per %s"
+
+#: dance.py:152
+msgid "ready.png"
+msgstr "ready_ca.png"
+
+#: dance.py:163
+msgid "go.png"
+msgstr "go_ca.png"
+
+#: dance.py:226
+msgid "Next Song"
+msgstr "Següent Cançó"
+
+#: dance.py:227
+msgid "Confirm: Begin   Cancel: Stop"
+msgstr "Confirm: comença   Cancel: para"
+
+#: dance.py:228
+msgid "Start: Change Options"
+msgstr "Start: canvia les opcions"
+
+#: dance.py:265 endless.py:38
+#, python-format
+msgid "Player %d"
+msgstr "Jugador %d"
+
+#: dance.py:288
+msgid "Default Settings"
+msgstr "Paràmetres per defecte"
+
+#: dance.py:319
+msgid "There was an error loading "
+msgstr "S'ha produït un error mentre es carregava"
+
+#: dance.py:338
+msgid "Playing"
+msgstr "Reproduint"
+
+#: dance.py:436
+msgid "The audio file for this song "
+msgstr "El fitxer d'àudio per aquesta cançó"
+
+#: dance.py:437
+msgid " could not be found."
+msgstr " no s'ha pogut trobar."
+
+#: dance.py:523
+msgid "Saving a screenshot to"
+msgstr "S'està desant la captura a"
+
+#: dance.py:537
+#, python-format
+msgid "Average FPS for this song was %d."
+msgstr "La mitjana de FPS de la cançó ha estat %d."
+
+#: endless.py:20
+msgid "Left: Make the songs that will be played easier"
+msgstr "Esquerra: fa que les cançons que es juguin siguin més fàcils"
+
+#: endless.py:21
+msgid "Right: Make the songs that will be played harder"
+msgstr "Dreta: fa que les cançons que es juguin siguin més difícils"
+
+#: endless.py:22
+msgid "Up: Select difficulty by name"
+msgstr "Amunt: escull la dificultat pel nom"
+
+#: endless.py:23
+msgid "Down: Select difficulty by rating"
+msgstr "Avall: escull dificultat segons la grau"
+
+#: endless.py:24
+msgid "Enter / Up Right: Start playing songs until you fail"
+msgstr "Retorn / Amunt Dreta: juga cançons fins a fallar"
+
+#: endless.py:25
+msgid "Escape / Up Left: Go back to the game selection screen"
+msgstr "ESC / Amunt esquerra: va endarrere a la pantalla de selecció de joc"
+
+#: endless.py:26
+msgid "Start: Go to the options screen / F11: Toggle fullscreen"
+msgstr "Start: opcions / F11: pantalla completa"
+
+#: endless.py:47
+msgid "Select by Difficulty"
+msgstr "Escolliu dificultat"
+
+#: endless.py:51
+msgid "Select by Rating"
+msgstr "Escolliu grau"
+
+#: endless.py:52
+#, python-format
+msgid "Between %d and %d"
+msgstr "Entre %d i %d"
+
+#: endless.py:114
+msgid "The difficulty settings you chose result "
+msgstr "No hi ha cap cançó disponible"
+
+#: endless.py:115
+msgid "in no songs being available to play."
+msgstr "que compleixi els paràmetres escollits."
+
+#: endless.py:149
+msgid "You need more songs to play Endless Mode. "
+msgstr "Et fan falta més cançons per jugar en mode Sens fi."
+
+#: endless.py:150
+msgid "Otherwise, it's just really boring."
+msgstr "Si no, seria avorrit."
+
+#: fileparsers.py:793
+msgid "No Mix"
+msgstr "Sense Mix"
+
+#: fileparsers.py:794
+msgid "Untitled"
+msgstr "Sense títol"
+
+#: fileparsers.py:796 fileparsers.py:797
+msgid "Unknown"
+msgstr "Desconegut"
+
+#: fileparsers.py:817
+msgid " is missing: "
+msgstr " falta: "
+
+#: fileparsers.py:823
+#, python-format
+msgid "W: Non-Unicode key in %s: %s"
+msgstr "A: clau No-Unicode a %s: %s"
+
+#: gameselect.py:15
+msgid "Up / Down: Change game, mode, or interface"
+msgstr "Amunt/Avall: canvia el joc, mode o interfície"
+
+#: gameselect.py:16
+msgid "Enter / Up Right: Advance your choice"
+msgstr "Enter / Amunt dreta: endavant amb la selecció"
+
+#: gameselect.py:17
+msgid "Escape / Up Left: Back up or exit"
+msgstr "Escape / Amunt esquerra: retrocedeix o surt"
+
+#: gameselect.py:18
+msgid "F11: Toggles fullscreen"
+msgstr "F11: pantalla completa"
+
+#: gameselect.py:19
+#, python-format
+msgid "Enjoy pydance %s!"
+msgstr "Gaudeix pydance %s!"
+
+#: gameselect.py:23 gameselect.py:62 gameselect.py:89 gameselect.py:90
+#: gameselect.py:91 gameselect.py:92 gameselect.py:141 gameselect.py:190
+#: gameselect.py:191 gameselect.py:199
+msgid "4 panel"
+msgstr "panell de 4 "
+
+#: gameselect.py:23 gameselect.py:63 gameselect.py:99 gameselect.py:100
+#: gameselect.py:101 gameselect.py:102 gameselect.py:144
+msgid "5 panel"
+msgstr "panell de 5"
+
+#: gameselect.py:23 gameselect.py:64 gameselect.py:104 gameselect.py:105
+#: gameselect.py:106 gameselect.py:107 gameselect.py:145
+msgid "6 panel"
+msgstr "panell de 6"
+
+#: gameselect.py:23 gameselect.py:65 gameselect.py:109 gameselect.py:110
+#: gameselect.py:111 gameselect.py:112 gameselect.py:146
+msgid "8 panel"
+msgstr "panell de 8"
+
+#: gameselect.py:23 gameselect.py:66 gameselect.py:114 gameselect.py:115
+#: gameselect.py:116 gameselect.py:117 gameselect.py:147
+msgid "9 panel"
+msgstr "panell de 9"
+
+#: gameselect.py:24 gameselect.py:67 gameselect.py:119 gameselect.py:120
+#: gameselect.py:121 gameselect.py:122 gameselect.py:148 menudriver.py:224
+msgid "Parapara"
+msgstr "Parapara"
+
+#: gameselect.py:24 gameselect.py:70 gameselect.py:124 gameselect.py:125
+#: gameselect.py:126 gameselect.py:127 gameselect.py:149 menudriver.py:226
+msgid "DMX"
+msgstr "DMX"
+
+#: gameselect.py:24 gameselect.py:69 gameselect.py:129 gameselect.py:130
+#: gameselect.py:131 gameselect.py:132 gameselect.py:152 menudriver.py:228
+msgid "EZ2"
+msgstr "EZ2"
+
+#: gameselect.py:24 gameselect.py:68 gameselect.py:134 gameselect.py:135
+#: gameselect.py:136 gameselect.py:137 gameselect.py:153 menudriver.py:230
+msgid "EZ2 Real"
+msgstr "EZ2 Real"
+
+#: gameselect.py:24 gameselect.py:61 gameselect.py:94 gameselect.py:95
+#: gameselect.py:96 gameselect.py:97 gameselect.py:143
+msgid "3 panel"
+msgstr "panell de 3"
+
+#: gameselect.py:25 gameselect.py:71 gameselect.py:89 gameselect.py:94
+#: gameselect.py:99 gameselect.py:104 gameselect.py:109 gameselect.py:114
+#: gameselect.py:119 gameselect.py:124 gameselect.py:129 gameselect.py:134
+#: gameselect.py:155
+msgid "Single"
+msgstr "Sol"
+
+#: gameselect.py:25 gameselect.py:72 gameselect.py:90 gameselect.py:95
+#: gameselect.py:100 gameselect.py:105 gameselect.py:110 gameselect.py:115
+#: gameselect.py:120 gameselect.py:125 gameselect.py:130 gameselect.py:135
+#: gameselect.py:156
+msgid "Versus"
+msgstr "Competició"
+
+#: gameselect.py:25 gameselect.py:73 gameselect.py:92 gameselect.py:97
+#: gameselect.py:102 gameselect.py:107 gameselect.py:112 gameselect.py:117
+#: gameselect.py:122 gameselect.py:127 gameselect.py:132 gameselect.py:137
+#: gameselect.py:158
+msgid "Double"
+msgstr "Doble"
+
+#: gameselect.py:25 gameselect.py:74 gameselect.py:91 gameselect.py:96
+#: gameselect.py:101 gameselect.py:106 gameselect.py:111 gameselect.py:116
+#: gameselect.py:121 gameselect.py:126 gameselect.py:131 gameselect.py:136
+#: gameselect.py:157
+msgid "Couple"
+msgstr "Parella"
+
+#: gameselect.py:26 gameselect.py:76 gameselect.py:83 gameselect.py:162
+msgid "Nonstop"
+msgstr "Sense parar"
+
+#: gameselect.py:26 gameselect.py:77 gameselect.py:82 gameselect.py:161
+#: grades.py:55
+msgid "Endless"
+msgstr "Sens Fi"
+
+#: gameselect.py:141
+msgid "The standard up, down, left and right arrows "
+msgstr "Les fletxes estàndard amunt, avall, esquerra i dreta "
+
+#: gameselect.py:142
+msgid "(like Dance Dance Revolution)"
+msgstr "(com Dance Dance Revolution)"
+
+#: gameselect.py:143
+msgid "Practice using up left and up right with easier steps."
+msgstr "Practica utilitzant amunt esquerra i amunt dreta amb passos fàcils."
+
+#: gameselect.py:144
+msgid "Diagonal arrows and the center (like Pump It Up)"
+msgstr "Fletxes diagonals i el centre (com Pump It Up)"
+
+#: gameselect.py:145
+msgid "Four panel plus the upper diagonal arrows (like DDR Solo)"
+msgstr "Panell de 4 més les fletxes diagonals superiors (com DDR Solo)"
+
+#: gameselect.py:146
+msgid "Everything but the center (like Technomotion)"
+msgstr "Tot menys el centre (com Technomotion)"
+
+#: gameselect.py:147
+msgid "Everything! (like Pop'n'Stage)"
+msgstr "Tot! (com Pop'n'Stage)"
+
+#: gameselect.py:148
+msgid "Wave your arms (or feet) around"
+msgstr "Mou els braços (o peus)"
+
+#: gameselect.py:149
+msgid "Crazy kung-fu action (like Dance ManiaX / Freaks). "
+msgstr "Acció kung-fu boja (com ManiaX Dance / Freaks)"
+
+#: gameselect.py:150
+msgid "Use left, up left, up right, and right."
+msgstr "Useu esquerra, amunt esquerra, amunt dreta i dreta."
+
+#: gameselect.py:152
+msgid "Three panels, two sensors, using left and right."
+msgstr "Tres panells, dos sensors, utilitzant esquerra i dreta."
+
+#: gameselect.py:153
+msgid "Three panels and four sensors."
+msgstr "Tres panells i quatre sensors."
+
+#: gameselect.py:155
+msgid "Play by yourself."
+msgstr "Juga tu sol."
+
+#: gameselect.py:156
+msgid "Challenge an opponent to the same steps."
+msgstr "Desafieu al rival amb els mateixos passos."
+
+#: gameselect.py:157
+msgid "Two people dance different steps to the same song."
+msgstr "Dues persones ballen diferents passos amb la mateixa cançó."
+
+#: gameselect.py:158
+msgid "Try playing on both sides at once."
+msgstr "Prova de jugar als dos costats a la vegada."
+
+#: gameselect.py:160
+msgid "Play one song at a time."
+msgstr "Juga una cançó cada vegada."
+
+#: gameselect.py:161
+msgid "Keep dancing until you fail."
+msgstr "Segueix ballant fins a fallar."
+
+#: gameselect.py:162
+msgid "Play several songs in a row."
+msgstr "Jugar diverses cançons consecutivament."
+
+#: gameselect.py:172
+msgid "Select a Game"
+msgstr "Selecciona un joc"
+
+#: gameselect.py:172
+msgid "Select a Mode"
+msgstr "Selecciona un mode"
+
+#: gameselect.py:172
+msgid "Select Type"
+msgstr "Selecciona un tipus"
+
+#: grades.py:54
+msgid "Dance Points"
+msgstr "Punts"
+
+#: grades.py:56
+msgid "Like dance points, but failing doesn't result in an F."
+msgstr "Com els punts, però fallar no resulta una F"
+
+#: gradescreen.py:43
+msgid "Press Escape/Confirm/Start"
+msgstr "Prem Esc/Confirma/Start"
+
+#: gradescreen.py:210
+#, python-format
+msgid "GRADE: %s (%s) - total steps: %d; best combo: %d"
+msgstr "GRAU: %s (%s) - passos totals: %d millor combo: %d"
+
+#: gradescreen.py:211
+#, python-format
+msgid "V: %d P: %d G: %d O: %d B: %d M: %d - %d/%d holds"
+msgstr "M: %d P: %d G: %d Bé: %d B: %d M: %d - %d/%d sostingudes"
+
+#: gradescreen.py:213
+#, python-format
+msgid "Average off: %0.3f, standard deviation %0.2f"
+msgstr "Mitjana de: %0.3f, desviació estàndard %0.2f"
+
+#: gradescreen.py:233 gradescreen.py:255
+msgid "MARVEL.:"
+msgstr "MERAVEL.:"
+
+#: gradescreen.py:234 gradescreen.py:256
+msgid "PERFECT:"
+msgstr "PERFECTE:"
+
+#: gradescreen.py:235 gradescreen.py:257
+msgid "GREAT:"
+msgstr "GENIAL:"
+
+#: gradescreen.py:236 gradescreen.py:258
+msgid "OKAY:"
+msgstr "BÉ:"
+
+#: gradescreen.py:237 gradescreen.py:259
+msgid "BOO:"
+msgstr "BUU:"
+
+#: gradescreen.py:238 gradescreen.py:260
+msgid "MISS:"
+msgstr "FORA:"
+
+#: gradescreen.py:239 gradescreen.py:261
+msgid "Score:"
+msgstr "Punts:"
+
+#: gradescreen.py:240 gradescreen.py:262
+msgid "Holds:"
+msgstr "Sostingudes:"
+
+#: gradescreen.py:242 gradescreen.py:264
+msgid "Max Combo:"
+msgstr "Combo màx:"
+
+#: gradescreen.py:243 gradescreen.py:265
+msgid "Early:"
+msgstr "Aviat:"
+
+#: gradescreen.py:244 gradescreen.py:266
+msgid "Late:"
+msgstr "Tard:"
+
+#: gradescreen.py:245 gradescreen.py:267
+msgid "TOTAL:"
+msgstr "TOTAL:"
+
+#: gradescreen.py:247
+msgid "rating-"
+msgstr "grau-"
+
+#: judge.py:143
+msgid "Time"
+msgstr "Time"
+
+#: judge.py:144
+msgid "Judging is based on how many seconds you are from the correct time."
+msgstr "El grau es basa en quants segons has passat del temps correcte."
+
+#: judge.py:145
+msgid "Beat"
+msgstr "Compàs"
+
+#: judge.py:146
+msgid "Judging is based on how many beats you are from the correct time."
+msgstr "El grau es basa en quants passos s'han fet en el temps correcte."
+
+#: lifebars.py:24
+msgid "FAILED"
+msgstr "FORA!"
+
+#: lifebars.py:220
+msgid "Battery"
+msgstr "Bateria"
+
+#: lifebars.py:220
+msgid "A few points of life, increasing each song."
+msgstr "Pocs punts de vida, incrementen a cada cançó."
+
+#: lifebars.py:221
+msgid "Power Drop"
+msgstr "Només resta"
+
+#: lifebars.py:221
+msgid "Like normal, but never goes back up."
+msgstr "Com la opció normal, però no es torna a omplir."
+
+#: lifebars.py:222
+msgid "Mediocre"
+msgstr "Mediocre"
+
+#: lifebars.py:222
+msgid "Fail if you do too poorly or too well."
+msgstr "Falla si ho fas massa malament o massa bé."
+
+#: lifebars.py:223
+msgid "Tug of War"
+msgstr "Guerra"
+
+#: lifebars.py:223
+msgid "Fight with the other player for life."
+msgstr "Lluita amb el rival a vida o mort."
+
+#: lifebars.py:224
+msgid "Great Attack"
+msgstr "Atac de Genial"
+
+#: lifebars.py:224
+msgid "Only greats make the bar go up."
+msgstr "Només Genial fa omplir la barra."
+
+#: menudriver.py:64 menudriver.py:82
+msgid "on"
+msgstr "activat"
+
+#: menudriver.py:65 menudriver.py:81
+msgid "off"
+msgstr "desactivat"
+
+#: menudriver.py:186 menudriver.py:188
+#, python-format
+msgid "pydance %s"
+msgstr "pydance %s"
+
+#: menudriver.py:190
+msgid "By Joe Wreschnig & Brendan Becker"
+msgstr "Per Joe Wreschning i Brendan Becker"
+
+#: menudriver.py:191
+msgid "(Your CREDITS file is missing.)"
+msgstr "(El fitxer CREDITS no hi és.)"
+
+#: menudriver.py:194
+msgid "Play Game"
+msgstr "Jugar"
+
+#: menudriver.py:196
+msgid "Map Keys"
+msgstr "Mapar Tecles"
+
+#: menudriver.py:198
+msgid "Game Options"
+msgstr "Opcions"
+
+#: menudriver.py:199
+msgid "Autofail"
+msgstr "Autofallada"
+
+#: menudriver.py:199
+msgid "autofail"
+msgstr "Autofallada"
+
+#: menudriver.py:200
+msgid "Assist Mode"
+msgstr "Mode assistit"
+
+#: menudriver.py:200
+msgid "assist"
+msgstr "assistit"
+
+#: menudriver.py:201 options.py:20 options.py:95 options.py:160
+msgid "Off"
+msgstr "Inactiu"
+
+#: menudriver.py:202
+msgid "Click"
+msgstr "Clic"
+
+#: menudriver.py:203
+msgid "Full"
+msgstr "Complert"
+
+#: menudriver.py:204
+msgid "Announcer"
+msgstr "Discjòquei"
+
+#: menudriver.py:205
+msgid "Themes ..."
+msgstr "Temes..."
+
+#: menudriver.py:206
+msgid "4 Panel"
+msgstr "Panell de 4"
+
+#: menudriver.py:208
+msgid "3 Panel"
+msgstr "Panell de 3"
+
+#: menudriver.py:210
+msgid "5 Panel"
+msgstr "Panell de 5"
+
+#: menudriver.py:212
+msgid "Large 6 Panel"
+msgstr "Panell de 6 gran"
+
+#: menudriver.py:214
+msgid "Small 6 Panel"
+msgstr "Panell de 6 petit"
+
+#: menudriver.py:216
+msgid "Large 8 Panel"
+msgstr "Panell de 8 gran"
+
+#: menudriver.py:218
+msgid "Small 8 Panel"
+msgstr "Panell de 8 petit"
+
+#: menudriver.py:220
+msgid "Large 9 Panel"
+msgstr "Panell de 9 gran"
+
+#: menudriver.py:222
+msgid "Small 9 Panel"
+msgstr "Panell de 9 petit"
+
+#: menudriver.py:232 menudriver.py:234 menudriver.py:252 menudriver.py:264
+msgid "Back"
+msgstr "Endarrere"
+
+#: menudriver.py:236
+msgid "Graphic Options"
+msgstr "Gràfics"
+
+#: menudriver.py:237
+msgid "Animation"
+msgstr "Animació"
+
+#: menudriver.py:238
+msgid "Arrow Effects"
+msgstr "Efectes de fletxa"
+
+#: menudriver.py:239
+msgid "none"
+msgstr "Cap"
+
+#: menudriver.py:239
+msgid "rotate"
+msgstr "gira"
+
+#: menudriver.py:239
+msgid "scale"
+msgstr "escala"
+
+#: menudriver.py:239
+msgid "rotate & scale"
+msgstr "gira i escala"
+
+#: menudriver.py:240
+msgid "Backgrounds"
+msgstr "Fons"
+
+#: menudriver.py:241
+msgid "Brightness"
+msgstr "Brillantor"
+
+#: menudriver.py:242
+msgid "very dark"
+msgstr "molt fosc"
+
+#: menudriver.py:243
+msgid "dark"
+msgstr "fosc"
+
+#: menudriver.py:244
+msgid "normal"
+msgstr "normal"
+
+#: menudriver.py:245
+msgid "bright"
+msgstr "brillant"
+
+#: menudriver.py:246
+msgid "very bright"
+msgstr "Molt brillant"
+
+#: menudriver.py:247
+msgid "Lyrics"
+msgstr "Lletres"
+
+#: menudriver.py:248
+msgid "Lyrics Color"
+msgstr "Color de les lletres"
+
+#: menudriver.py:249
+msgid "pink/purple"
+msgstr "rosa/porpra"
+
+#: menudriver.py:249
+msgid "purple/cyan"
+msgstr "porpra/cian"
+
+#: menudriver.py:250
+msgid "cyan/aqua"
+msgstr "cian/aqua"
+
+#: menudriver.py:250
+msgid "aqua/yellow"
+msgstr "aqua/groc"
+
+#: menudriver.py:251
+msgid "yellow/pink"
+msgstr "groc/rosa"
+
+#: menudriver.py:254
+msgid "Interface Options"
+msgstr "Interfície"
+
+#: menudriver.py:255
+msgid "Save Input"
+msgstr "Desa l'entrada"
+
+#: menudriver.py:256
+msgid "Song Previews"
+msgstr "Previsualització"
+
+#: menudriver.py:258
+msgid "Folders"
+msgstr "Carpetes"
+
+#: menudriver.py:259
+msgid "Timer Display"
+msgstr "Temporitzador"
+
+#: menudriver.py:260
+msgid "Song Info Screen"
+msgstr "Informació de la cançó"
+
+#: menudriver.py:262
+msgid "Never"
+msgstr "Mai"
+
+#: menudriver.py:262
+msgid "Multi-song Only"
+msgstr "Només multi-cançó"
+
+#: menudriver.py:262
+msgid "Always"
+msgstr "Sempre"
+
+#: menudriver.py:263
+msgid "Font (after restart)"
+msgstr "Lletra (proper arranc)"
+
+#: menudriver.py:268
+msgid "Main Menu"
+msgstr "Menú Principal"
+
+#: options.py:20 options.py:95
+msgid "On"
+msgstr "Actiu"
+
+#: options.py:34
+msgid "Speed"
+msgstr "Velocitat"
+
+#: options.py:35
+msgid "Adjust the speed at which the arrows scroll across the screen."
+msgstr ""
+"Ajustar la velocitat de les fletxes de desplaçament que travessen la "
+"pantalla."
+
+#: options.py:39
+msgid "Arrows scroll at 200bpm."
+msgstr "Fletxes de desplaçament a 200bpm."
+
+#: options.py:39
+msgid "Arrows scroll at 300bpm."
+msgstr "Fletxes de desplaçament a 300bpm."
+
+#: options.py:39
+msgid "Arrows scroll at 400bpm."
+msgstr "Fletxes de desplaçament a 400bpm."
+
+#: options.py:39
+msgid "Arrows scroll at 500bpm."
+msgstr "Fletxes de desplaçament a 500bpm."
+
+#: options.py:39
+msgid "Arrows scroll at 600bpm."
+msgstr "Fletxes de desplaçament a 600bpm."
+
+#: options.py:39
+msgid "Arrows scroll at 700bpm."
+msgstr "Fletxes de desplaçament a 700bpm."
+
+#: options.py:39
+msgid "Arrows scroll at 800bpm."
+msgstr "Fletxes de desplaçament a 800bpm."
+
+#: options.py:41
+msgid "Transform"
+msgstr "Transforma"
+
+#: options.py:42
+msgid "Change the step patterns for the song."
+msgstr "Canvia els fitxers de passes de la cançó."
+
+#: options.py:44
+msgid "Mirror"
+msgstr "Invers"
+
+#: options.py:44
+msgid "Left"
+msgstr "Esquerra"
+
+#: options.py:44
+msgid "Right"
+msgstr "Dreta"
+
+#: options.py:44
+msgid "Shuffle"
+msgstr "Mescla"
+
+#: options.py:44
+msgid "Random"
+msgstr "Aleatori"
+
+#: options.py:45
+msgid "Rotate the steps 180 degrees."
+msgstr "Rotar els passos 180 graus."
+
+#: options.py:46
+msgid "Rotate the steps 90 degrees to the left."
+msgstr "Rotar els passos 90 graus a l'esquerra."
+
+#: options.py:47
+msgid "Rotate the steps 90 degrees to the right."
+msgstr "Rotar els passos 90 graus a la dreta."
+
+#: options.py:48
+msgid "Swap all arrows from one direction to another."
+msgstr "Intercanviar la direcció de les fletxes"
+
+#: options.py:49
+msgid "Use totally random directions."
+msgstr "Utilitzar direccions aleatòries."
+
+#: options.py:51
+msgid "Add/Remove Steps"
+msgstr "Afegir/treure passos"
+
+#: options.py:52
+msgid "Add or remove arrows from step patterns."
+msgstr "Afegir o treure fletxes dels fitxers de passes."
+
+#: options.py:54
+msgid "Tiny"
+msgstr "Minúscul"
+
+#: options.py:54
+msgid "Little"
+msgstr "Petit"
+
+#: options.py:54
+msgid "Big"
+msgstr "Gran"
+
+#: options.py:54
+msgid "Quick"
+msgstr "Ràpid"
+
+#: options.py:54
+msgid "Skippy"
+msgstr "Molt ràpid"
+
+#: options.py:55
+msgid "Only dance to on-beat notes."
+msgstr "Ballar només les notes de compàs."
+
+#: options.py:56
+msgid "Only dance to on-beat and half-beat notes."
+msgstr "Ballar les notes de compàs i de mig compàs."
+
+#: options.py:57
+msgid "Add half-beat steps between on-beat ones."
+msgstr "Afegeix passos de mig compàs entre els de compàs"
+
+#: options.py:58
+msgid "Add steps between half-beat ones."
+msgstr "Afegeix passos entre els de mig compàs."
+
+#: options.py:59
+msgid "Add gallops between on-beat steps."
+msgstr "Afegir galops entre els passos de compàs."
+
+#: options.py:61
+msgid "Fade"
+msgstr "Esvair"
+
+#: options.py:62
+msgid "Fade arrows in or out while they scroll."
+msgstr "Esvair les fletxes mentre es desplaçen."
+
+#: options.py:64
+msgid "Sudden"
+msgstr "De cop"
+
+#: options.py:64
+msgid "Hidden"
+msgstr "Amagat"
+
+#: options.py:64
+msgid "Peek"
+msgstr "Cop d'ull"
+
+#: options.py:64
+msgid "Cycle"
+msgstr "Cíclic"
+
+#: options.py:64
+msgid "Stealth"
+msgstr "Sigilós"
+
+#: options.py:65
+msgid "Only display arrows near the top."
+msgstr "Mostrar només les fletxes prop de la part superior."
+
+#: options.py:66
+msgid "Only display arrows near the bottom."
+msgstr "Mostrar només les fletxes prop de la part inferior."
+
+#: options.py:67
+msgid "Only display arrows near the middle."
+msgstr "Mostrar només les fletxes prop del mig."
+
+#: options.py:68
+msgid "Blink arrows in and out."
+msgstr "Fletxes intermitents."
+
+#: options.py:69
+msgid "No arrows are displayed."
+msgstr "No mostris les fletxes."
+
+#: options.py:71
+msgid "Acceleration"
+msgstr "Acceleració"
+
+#: options.py:72
+msgid "Accelerate or decelerate arrows."
+msgstr "Accelerar o frenar les fletxes."
+
+#: options.py:74
+msgid "Brake"
+msgstr "Fre"
+
+#: options.py:74
+msgid "Boost"
+msgstr "Agafa embranzida"
+
+#: options.py:75
+msgid "Decelerate near the top"
+msgstr "Desaccelar prop de la part superior."
+
+#: options.py:75
+msgid "Accelerate near the top."
+msgstr "Accelerar prop de la part superior."
+
+#: options.py:77
+msgid "Size"
+msgstr "Mida"
+
+#: options.py:78
+msgid "Change arrow sizes."
+msgstr "Canvia la mida de les fletxes."
+
+#: options.py:80
+msgid "Shrink"
+msgstr "Encongir"
+
+#: options.py:80
+msgid "Grow"
+msgstr "Engrandir"
+
+#: options.py:81
+msgid "Smaller arrows near the top."
+msgstr "Les fletxes més petites prop de la part superior."
+
+#: options.py:82
+msgid "Smaller arrows near the bottom."
+msgstr "Les fletxes més petites prop de la part inferior."
+
+#: options.py:84
+msgid "Direction"
+msgstr "Direcció"
+
+#: options.py:85
+msgid "Change the direction arrows scroll."
+msgstr "Canvia la direcció de desplaçament de les fletxes"
+
+#: options.py:87
+msgid "Reverse"
+msgstr "Invertit"
+
+#: options.py:87
+msgid "Center"
+msgstr "Centrat"
+
+#: options.py:88
+msgid "Arrows go from bottom to top."
+msgstr "Les fletxes van des de baix a dalt."
+
+#: options.py:89
+msgid "Arrows go from top to bottom."
+msgstr "Les fletxes van de dalt a baix."
+
+#: options.py:90
+msgid "Arrows go from the top and bottom to the center."
+msgstr "Les fletxes van de dalt i de baix cap al centre."
+
+#: options.py:92
+msgid "Jumps"
+msgstr "Salts"
+
+#: options.py:93
+msgid "Turn jumps off, or add more."
+msgstr "Desactiva els salts o afegeix-ne més."
+
+#: options.py:95
+msgid "Wide"
+msgstr "Ample"
+
+#: options.py:96
+msgid "Remove jumps from the song."
+msgstr "Treu els salts de la cançó."
+
+#: options.py:97
+msgid "Add jumps on every on-beat step."
+msgstr "Afegeix salts a cada pas de compàs."
+
+#: options.py:99
+msgid "Spin"
+msgstr "Gir"
+
+#: options.py:100
+msgid "Rotate arrows as they go up the screen."
+msgstr "Fa girar les fletxes mentre pugen."
+
+#: options.py:102
+msgid "Colors"
+msgstr "Colors"
+
+#: options.py:103
+msgid "Use colors of arrows to indicate the beat."
+msgstr "Utilitzar colors a les fletxes per indicar el compàs."
+
+#: options.py:105
+msgid "Flat"
+msgstr "Pla"
+
+#: options.py:106
+msgid "All arrows are the same."
+msgstr "Totes les fletxes són iguals."
+
+#: options.py:107
+msgid "Different arrows have different colors."
+msgstr "Fletxes diferents tenen diferents colors."
+
+#: options.py:109
+msgid "Dark"
+msgstr "Fosc"
+
+#: options.py:110
+msgid "Don't display the top arrows."
+msgstr "No mostris les fletxes de dalt."
+
+#: options.py:112
+msgid "Holds"
+msgstr "Sostingudes"
+
+#: options.py:113
+msgid "Allow hold ('freeze') arrows in songs."
+msgstr "Permet fletxes sostingudes a les cançons."
+
+#: options.py:115
+msgid "Scoring"
+msgstr "Puntuació"
+
+#: options.py:116
+msgid "The scoring algorithm."
+msgstr "L'algorisme de puntuació."
+
+#: options.py:118
+msgid "Grades"
+msgstr "Qualificació"
+
+#: options.py:119
+msgid "The grading algorithm."
+msgstr "L'algorisme de qualificació."
+
+#: options.py:121
+msgid "Combos"
+msgstr "Combos"
+
+#: options.py:122
+msgid "How your combo increases."
+msgstr "Com incrementen els combos."
+
+#: options.py:124
+msgid "Judging Method"
+msgstr "Mètode de valoració"
+
+#: options.py:125
+msgid "How your steps are judged."
+msgstr "Com es valoren els passos."
+
+#: options.py:127
+msgid "Judging Windows"
+msgstr "Marge de valoració"
+
+#: options.py:128
+msgid "The margin of error for your steps."
+msgstr "El marge d'error dels passos."
+
+#: options.py:131
+msgid "Window is twice normal size."
+msgstr "El marge és el doble de gran."
+
+#: options.py:132
+msgid "Window is 9/5 normal size."
+msgstr "El marge és 9/5 de la mida normal."
+
+#: options.py:133
+msgid "Window is 8/5 normal size."
+msgstr "El marge és 8/5 de la mida normal."
+
+#: options.py:134
+msgid "Window is 7/5 normal size."
+msgstr "El marge és 7/5 de la mida normal."
+
+#: options.py:135
+msgid "Window is 6/5 normal size."
+msgstr "El marge és 6/5 de la mida normal."
+
+#: options.py:136
+msgid "Window is 4/5 normal size."
+msgstr "El marge és 4/5 de la mida normal."
+
+#: options.py:137
+msgid "Window is 3/5 normal size."
+msgstr "El marge és 3/5 de la mida normal."
+
+#: options.py:138
+msgid "Window is 2/5 normal size."
+msgstr "El marge és 2/5 de la mida normal."
+
+#: options.py:139
+msgid "Window is 1/5 normal size."
+msgstr "El marge és 1/5 de la mida normal."
+
+#: options.py:142
+msgid "Life"
+msgstr "Vida"
+
+#: options.py:143
+msgid "Increase or decrease your amount of (non-battery) life."
+msgstr "Puja o baixa la quantitat de vida (sense bateria)."
+
+#: options.py:144
+msgid "Undead"
+msgstr "Mortal"
+
+#: options.py:144
+msgid "Life is 1/4 the usual amount."
+msgstr "La vida és 1/4 de la quantitat normal."
+
+#: options.py:145
+msgid "Very Low"
+msgstr "Molt baix"
+
+#: options.py:145
+msgid "Life is 1/2 the usual amount."
+msgstr "La vida és 1/2 de la quantitat normal."
+
+#: options.py:146
+msgid "Low"
+msgstr "Baix"
+
+#: options.py:146
+msgid "Life is 3/4 the usual amount."
+msgstr "La vida és 3/4 de la quantitat normal."
+
+#: options.py:148
+msgid "High"
+msgstr "Alt"
+
+#: options.py:148
+msgid "Life is 5/4 the usual amount."
+msgstr "La vida és 5/4 de la quantitat normal."
+
+#: options.py:149
+msgid "Very High"
+msgstr "Molt Alt"
+
+#: options.py:149
+msgid "Life is 3/2 the usual amount."
+msgstr "La vida és 3/2 de la quantitat normal."
+
+#: options.py:150
+msgid "Lazarus"
+msgstr "Alcalina"
+
+#: options.py:150
+msgid "Life is 7/4 the usual amount."
+msgstr "La vida és 7/4 de la quantitat normal."
+
+#: options.py:152
+msgid "Lifebar"
+msgstr "Barra de vida"
+
+#: options.py:153
+msgid "The kind of lifebar used."
+msgstr "El tipus de barra de vida utilitzat."
+
+#: options.py:155
+msgid "Oni Lives"
+msgstr "Vides Oni"
+
+#: options.py:156
+msgid "The initial / maximum life in Battery mode."
+msgstr "La vida inicial/màxima en mode Bateria."
+
+#: options.py:158
+msgid "Secret Arrows"
+msgstr "Fletxes secretes"
+
+#: options.py:159
+msgid "Secret arrow display"
+msgstr "Mostrar fletxes secretes"
+
+#: options.py:160
+msgid "Disable secret arrows."
+msgstr "Desactiva fletxes secretes."
+
+#: options.py:161
+msgid "Invisible"
+msgstr "Invisible"
+
+#: options.py:161
+msgid "Enable but don't display them."
+msgstr "Les activa però no les ensenya."
+
+#: options.py:162
+msgid "Faint"
+msgstr "Feble"
+
+#: options.py:162
+msgid "Show secret arrows faintly."
+msgstr "Mostrar feblement les fletxes secretes."
+
+#: options.py:164
+msgid "Battle Mode"
+msgstr "Mode batalla."
+
+#: options.py:165
+msgid "Arrows start in the center and float outwards."
+msgstr "Les fletxes surten del centre i floten en fora."
+
+#: options.py:176
+msgid "Up / Down: Select option"
+msgstr "Amunt/Avall: canvia la cançó"
+
+#: options.py:177
+msgid "Left / Right: Change value"
+msgstr "esquerra / Dreta: canvia la dificultat"
+
+#: options.py:178
+msgid "Start: Return to song selector"
+msgstr "Start: torna al selector de cançons"
+
+#: options.py:179
+msgid "F11: Toggle fullscreen"
+msgstr "F11: commuta a pantalla completa"
+
+#: pad.py:13
+msgid "quit"
+msgstr "surt"
+
+#: pad.py:13
+msgid "up"
+msgstr "amunt"
+
+#: pad.py:13
+msgid "up-left"
+msgstr "amunt-esquerra"
+
+#: pad.py:13
+msgid "left"
+msgstr "esquerra"
+
+#: pad.py:13
+msgid "down-left"
+msgstr "avall-esquerra"
+
+#: pad.py:14
+msgid "down"
+msgstr "avall"
+
+#: pad.py:14
+msgid "down-right"
+msgstr "avall-dreta"
+
+#: pad.py:14
+msgid "right"
+msgstr "dreta"
+
+#: pad.py:14
+msgid "up-right"
+msgstr "amunt-dreta"
+
+#: pad.py:14
+msgid "center"
+msgstr "centre"
+
+#: pad.py:15
+msgid "start"
+msgstr "start"
+
+#: pad.py:15
+msgid "select"
+msgstr "select"
+
+#: pad.py:131 pad.py:187
+msgid "joystick(s) found."
+msgstr "control(s) trobat(s)."
+
+#: pad.py:140
+#, python-format
+msgid "Joystick %d initialized: %d axes, %d buttons."
+msgstr "S'ha inicialitzat el control %d: %d eixos, %d botons."
+
+#: pad.py:157
+msgid "W: Unable to load input configuration file."
+msgstr "A: no s'ha pogut carregar el fitxer de configuració."
+
+#: pad.py:161
+msgid "Loaded input configuration."
+msgstr "S'ha carregat la configuració."
+
+#: pad.py:165
+msgid "EMSUSB2 found. Using preset EMSUSB2 config."
+msgstr ""
+"S'ha trobat un EMSUSB2. S'utilitzarà la configuració per defecte de EMSUB2."
+
+#: pad.py:169
+#, python-format
+msgid "Initializing player 1 using js%d."
+msgstr "Inicialitzant jugador 1 utilitzant js%d."
+
+#: pad.py:175
+#, python-format
+msgid "Initializing player 2 using js%d."
+msgstr "Inicialitzant jugador 2 utilitzant js%d."
+
+#: pad.py:178
+msgid "No known joysticks found! If you want to use yours,"
+msgstr ""
+"No s'ha trobat cap control conegut! Si vols utilitzar-ne una de propia,"
+
+#: pad.py:179
+msgid "you'll have to map its button manually once to use it."
+msgstr "hauràs de mapar els botons manualment almenys un cop."
+
+#: pad.py:310
+#, python-format
+msgid "Press a key for %s (escape to cancel)"
+msgstr "Prem una tecla per %s (ESC per cancel·lar)"
+
+#: pad.py:313
+#, python-format
+msgid "Press a button for %s (escape to cancel)"
+msgstr "Prem un botó per %s (ESC per cancel·lar)"
+
+#: pad.py:337
+msgid "Player 1"
+msgstr "Jugador 1"
+
+#: pad.py:337
+msgid "Player 2"
+msgstr "Jugador 2"
+
+#: pad.py:338
+msgid "Keyboard"
+msgstr "Teclat"
+
+#: pad.py:338
+msgid "Joystick"
+msgstr "Control"
+
+#: player.py:98
+msgid "OK"
+msgstr "BÉ"
+
+#: player.py:99
+msgid "NG"
+msgstr "NG"
+
+#: player.py:144 player.py:145
+msgid "MARVELOUS"
+msgstr "MERAVELLÓS"
+
+#: player.py:147 player.py:148
+msgid "PERFECT"
+msgstr "PERFECTE"
+
+#: player.py:150 player.py:151
+msgid "GREAT"
+msgstr "GENIAL"
+
+#: player.py:153 player.py:154
+msgid "OKAY"
+msgstr "BÉ"
+
+#: player.py:156 player.py:157
+msgid "BOO"
+msgstr "BUU!"
+
+#: player.py:159 player.py:160
+msgid "MISS"
+msgstr "FORA"
+
+#: pydance.py:15
+#, python-format
+msgid "Usage: %s [options]"
+msgstr "Ús: %s [opcions]"
+
+#: pydance.py:16
+msgid " -h, --help         display this help text and exit"
+msgstr " -h, --help         mostra aquest text d'ajuda i surt"
+
+#: pydance.py:17
+msgid " -v, --version      display the version and exit"
+msgstr " -v, --version     mostra la versió i surt"
+
+#: pydance.py:18
+msgid " -f, --filename     load and play a step file"
+msgstr " -f, --filename      carrega i reprodueix una cançó"
+
+#: pydance.py:19
+msgid " -m, --mode         the mode to play the file in (default SINGLE)"
+msgstr " -m, --mode         el mode de joc (per defecte SOL)"
+
+#: pydance.py:20
+msgid " -d, --difficulty   the difficult to play the file (default BASIC)"
+msgstr " -d, --difficulty    la dificultat de joc (per defecte BÀSIC)"
+
+#: pydance.py:24
+#, python-format
+msgid "pydance %s by Joe Wreschnig, Brendan Becker, and others"
+msgstr "pydance %s per Joe Wreschning, Brendan Becker, i altres"
+
+#: pydance.py:62
+msgid "E: Can't get a 16 bit display! pydance doesn't work in 8 bit mode."
+msgstr ""
+"E: no es pot posar la pantalla a 16 bits! pydance no funciona en mode 8 bits"
+
+#: pydance.py:68
+msgid "Entering debug (play-and-quit) mode."
+msgstr "S'entra en mode depuració (jugar i sortir)."
+
+#: pydance.py:88
+#, python-format
+msgid "Found %d %s. Loading..."
+msgstr "%d %s. Carregant..."
+
+#: pydance.py:95 pydance.py:96 pydance.py:100
+msgid "E:"
+msgstr "E:"
+
+#: pydance.py:99
+msgid "E: Unknown error loading"
+msgstr "E: error desconegut en carregar"
+
+#: pydance.py:101
+msgid "E: Please contact the developers (pyddr-devel@icculus.org)."
+msgstr ""
+"E: si us plau, contacteu amb els desenvolupadors (pyddr-devel@icculus.org)."
+
+#: pydance.py:120
+msgid "Psyco optimizing compiler found. Using psyco.full()."
+msgstr ""
+"S'ha trobat el compilador d'optimització Psyco. Utilitzant psyco.full()."
+
+#: pydance.py:122
+msgid "W: Psyco optimizing compiler not found."
+msgstr "A:  no s'ha trobat el compilador d'optimització Psyco."
+
+#: pydance.py:131
+msgid "--help"
+msgstr "--help"
+
+#: pydance.py:132
+msgid "--version"
+msgstr "--version"
+
+#: pydance.py:133
+msgid "--filename"
+msgstr "--filename"
+
+#: pydance.py:134
+msgid "--mode"
+msgstr "--mode"
+
+#: pydance.py:135
+msgid "--difficulty"
+msgstr "--difficulty"
+
+#: pydance.py:142
+msgid "Searching for songs in"
+msgstr "Buscant cançons a"
+
+#: pydance.py:145
+msgid "Searching for courses in"
+msgstr "Buscant recopilacions a"
+
+#: pydance.py:162
+msgid "songs"
+msgstr "cançons"
+
+#: pydance.py:178
+msgid "courses"
+msgstr "recopilacions"
+
+#: pydance.py:191
+msgid ""
+"You don't have any songs or step files. Check out http://icculus.org/pyddr/"
+"get.php#songs and download some free ones. If you already have some, make "
+"sure they're in "
+msgstr ""
+"No hi ha cap cançó ni fitxer de ball. Visiteu http://icculus.org/pyddr/get."
+"php#songs per baixeu-vos alguns de lliures. Si ja en teniu algun, assegureu-"
+"vos que és a"
+
+#: pydance.py:196
+msgid ""
+"You don't have any songs. Check http://icculus.org/pyddr/get.php#songs ."
+msgstr "No hi ha cap cançó. Visiteu a http://icculus.org/pyddr/get.php#songs ."
+
+#: scores.py:189
+msgid "pydance"
+msgstr "pydance"
+
+#: scores.py:189
+msgid "DDR 1st/2nd Mix"
+msgstr "DDR 1r/2n Mix"
+
+#: scores.py:190
+msgid "DDR 3rd Mix"
+msgstr "DDR 3r Mix"
+
+#: scores.py:190
+msgid "DDR 4th Mix"
+msgstr "DDR 4t Mix"
+
+#: scores.py:191
+msgid "DDR 5th Mix"
+msgstr "DDR 5è Mix"
+
+#: scores.py:191
+msgid "DDR 7th/8th"
+msgstr "DDR 7è/8è"
+
+#: scores.py:192
+msgid "DDR 8th Oni"
+msgstr "DDR 8è Oni"
+
+#: scores.py:192
+msgid "DDR 8th Nonstop"
+msgstr "DDR 8è Sense parar"
+
+#: scores.py:193
+msgid "EZ2 Dancer"
+msgstr "EZ2 Dancer"
+
+#: songselect.py:42
+msgid "subtitle"
+msgstr "subtítol"
+
+#: songselect.py:42
+msgid "title"
+msgstr "títol"
+
+#: songselect.py:42
+msgid "artist"
+msgstr "artista"
+
+#: songselect.py:42
+msgid "bpm"
+msgstr "ppm"
+
+#: songselect.py:42
+msgid "mix"
+msgstr "barreja"
+
+#: songselect.py:43
+msgid "rating"
+msgstr "grau"
+
+#: songselect.py:43
+msgid "difficulty"
+msgstr "dificultat"
+
+#: songselect.py:43
+msgid "rank"
+msgstr "grau"
+
+#: songselect.py:54
+msgid "Enter / Up Right: Open a folder or start a song"
+msgstr "Enter / Amunt dreta: obre carpeta o cançó"
+
+#: songselect.py:55
+msgid "Escape / Up Left: Closes  folder or exit"
+msgstr "Escape / Amunt esquerra: tanca la carpeta o surt"
+
+#: songselect.py:56
+msgid "Tab / Select: Go to a random song"
+msgstr "Tab / Select: tria una cançó aleatòria"
+
+#: songselect.py:57
+msgid "Start: Go to the options screen"
+msgstr "Start: va a la pantalla d'opcions"
+
+#: songselect.py:78
+#, python-format
+msgid "%d songs"
+msgstr "%d cançons"
+
+#: songselect.py:161
+msgid "You don't have any songs for the game mode ("
+msgstr "No hi ha cap cançó pel mode joc ("
+
+#: songselect.py:162
+msgid ") that you selected."
+msgstr ") que has seleccionat"
+
+#: songselect.py:231
+msgid "None"
+msgstr "Cap"
+
+#: songselect.py:300
+msgid "You don't have any songs that are marked "
+msgstr "No hi ha cap cançó marcada com a"
+
+#: songselect.py:301
+msgid "\"valid\" for random selection."
+msgstr "\"vàlida\" per la selecció aleatòria"
+
+#: songselect.py:308
+msgid "You don't have any songs here that "
+msgstr "No hi ha cap cançó aquí que"
+
+#: songselect.py:309
+msgid "are marked \"valid\" for random selection."
+msgstr "estigui marcada com a \"vàlida\" per a la selecció aleatòria"
+
+#: steps.py:312
+msgid "Not a supported file type:"
+msgstr "Tipus de fitxer no reconegut:"
+
+#: util.py:15
+msgid "BEGINNER"
+msgstr "PRINCIPANT"
+
+#: util.py:15
+msgid "EASY"
+msgstr "FÀCIL"
+
+#: util.py:15
+msgid "LIGHT"
+msgstr "LLEUGER"
+
+#: util.py:15
+msgid "BASIC"
+msgstr "BÀSIC"
+
+#: util.py:15
+msgid "PARA"
+msgstr "PARA"
+
+#: util.py:16
+msgid "ANOTHER"
+msgstr "ALTRE"
+
+#: util.py:16
+msgid "NORMAL"
+msgstr "NORMAL"
+
+#: util.py:16
+msgid "MEDIUM"
+msgstr "MITJÀ"
+
+#: util.py:16
+msgid "STANDARD"
+msgstr "ESTÀNDARD"
+
+#: util.py:17
+msgid "TRICK"
+msgstr "TRAMPÓS"
+
+#: util.py:17
+msgid "DOUBLE"
+msgstr "DOBLE"
+
+#: util.py:17
+msgid "HARD"
+msgstr "DIFÍCIL"
+
+#: util.py:17
+msgid "MANIAC"
+msgstr "MANÍAC"
+
+#: util.py:17
+msgid "HEAVY"
+msgstr "DUR"
+
+#: util.py:18
+msgid "HARDCORE"
+msgstr "D'INFART"
+
+#: util.py:18
+msgid "CHALLENGE"
+msgstr "REPTE"
+
+#: util.py:18
+msgid "ONI"
+msgstr "ONI"
+
+#: util.py:18
+msgid "SMANIAC"
+msgstr "S MANÍAC"
+
+#: util.py:19
+msgid "S-MANIAC"
+msgstr "S-MANÍAC"
+
+#: util.py:19
+msgid "CRAZY"
+msgstr "BOIG"
+
+#: util.py:19
+msgid "EXPERT"
+msgstr "EXPERT"
+
+#~ msgid " (Likes #%d)"
+#~ msgstr " (La %da que m'agrada més)"

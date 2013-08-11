@@ -1,0 +1,74 @@
+pydance INSTALLATION INSTRUCTIONS
+---------------------------------
+
+pydance currently is known to run on Windows, Unix and GNU/Linux, and
+Mac OS X systems. In theory, it will run anywhere Pygame and Python do.
+pydance can be gotten from http://www.icculus.org/pyddr/get.php.
+
+This is the short version of the installation instructions. More detailed
+help (like how to install all the strange kinds of files pydance supports)
+can be found in docs/manual.html.
+
+In all installations, you need the following things:
+ - A sufficiently recent SDL.
+ - The [currently] latest SDL_mixer (1.2.5), with Vorbis support.
+ - SMPEG, if you want bad MP3 support.
+ - Libvorbis.
+ - Python 2.3 or higher.
+ - Pygame 1.5.6 or higher (1.5.5 is acceptable but may crash on some files).
+
+If you are running a Unix distribution, all these probably come with
+your OS. Otherwise, you can find them at http://www.libsdl.org,
+http://www.xiph.org, http://www.python.org, and http://www.pygame.org.
+
+Installing under Unix or GNU/Linux
+----------------------------------
+ $ python setup.py
+ $ su -c 'make install'
+
+The first step checks to make sure you have appropriate versions of
+Python and Pygame installed. The second one copies files into the
+appropriate places on your system (according to the GNU/Linux FHS).
+
+If you need to install it somewhere else, you can set DESTDIR (to
+install to an alternate root entirely), or PREFIX (which is /usr/local
+by default).
+
+The default configuration file looks in /usr/share/games/pydance/songs,
+/usr/local/share/games/pydance/songs, and ~/.pydance/songs for Ogg/MP3
+and step files.
+
+Installing under Windows
+------------------------
+ X:\pydance> python setup.py
+
+That's it. Copy your song and step files to the same directory as pydance,
+or to a ..\songs directory.
+
+Optional Stuff
+--------------
+pydance needs to convert a few odd encodings, like CP949, that aren't
+in the base Python installation. pydance will run without it, but your fonts
+will render incorrectly (they probably will anyway, since good free
+Korean/Japanese fonts are lacking). This means you should install
+http://sourceforge.net/projects/koco, which contains the CP949 iconv
+codec.
+
+If you have the Psyco optimizing compiler installed (http://psyco.sf.net),
+pydance will use it by default. Set 'usepsyco' to 0 to turn it off, which
+you'll need to do to report bugs. Psyco may give pydance a good speed boost,
+but it is IA32-only currently.
+
+Troubleshooting
+---------------
+If you are having trouble with pydance, first check your OS distributor
+for updates. Debian and Gentoo GNU/Linux both have packages for pydance,
+and this is the recommended installation method for these systems.
+Also, visit http://www.icculus.org/pyddr/get.php and see if a new version
+has been released, or if there is a package for your platform. If that
+fails, drop by #pyddr on irc.freenode.net and see if anyone knows how
+to help you. However, if you ask for help, expect to answer a lot of
+questions about your OS and the software on it. In addition, if your
+OS is non-free (Microsoft Windows, Mac OS X, BeOS, or any of the non-free
+Linux distributions), and the problem is OS-specific, we won't be able to
+help.
